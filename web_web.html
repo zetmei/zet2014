@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZETMEI</title>
+	<link rel="shortcut icon" href="images/bg/icon.png" />
+	<link rel="stylesheet" href="css/reset(muki).css">
+	<link rel="stylesheet" href="css/frameStyle.css">
+	<link rel="stylesheet" href="css/contain.css">
+	<link href='http://fonts.googleapis.com/css?family=Michroma|Bad+Script|Play|Orbitron|Ruda|Julius+Sans+One' rel='stylesheet' type='text/css'>
+<style>
+	.cont_right{
+	display: inline-block;
+	position: absolute;
+	top:20px;
+	left:20px;
+	width:1000px;
+	height:410px;
+	background-color:#fff;
+}
+.footer{	
+	position:absolute;
+	top:950px;
+	width:1024px;
+	height:50px;
+	background-color:#fff;	
+	padding:10px; 
+	border-top:1px solid #000;
+}
+/*----*/
+.cr_in{
+		position: absolute;
+		top: 20px;
+		left:80px;
+		width: 950px;
+		height: 800px; 
+		/*border-top: 1px solid rgba(0,0,0,.2);*/
+		padding: 10px 0;	
+		/*background-color: #f00;	*/
+	}
+.cr_in h3{
+		position: absolute;
+		top:-15px;
+		left:0px;
+		font-size: 16px;
+		font-family: "OCR A Std","微軟正黑體";
+		color: #4d4d4d;
+		height: 20px;
+		line-height: 20px;
+		padding:0 10px;
+		border-right: 1px solid rgba(0,0,0,.2);
+	}
+.cube{
+		position: relative;
+		width: 820px;
+		height:200px;
+		margin: 10px 0;
+		-webkit-transform-style: preserve-3d;
+		-webkit-transition: .5s ;			
+	}
+.cube>div{
+		position: absolute;
+		width: 820px;
+		height:200px;
+		cursor: pointer;				
+	}	
+.cube_img {
+		-webkit-transform: translateZ(100px); 		
+		background: transparent;
+		overflow: hidden;
+		transition: opacity .7s;
+	}
+.cube_img img{
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 400px;
+	}	
+.cube_img:after{
+		content: '';
+		position: absolute;
+		width: 820px;
+		height:200px;
+		opacity: 0;
+		transition: opacity .7s;
+	}
+#cube_01:after{
+		background: url(images/web/web01.jpg) right -200px no-repeat;		
+	}
+#cube_02:after{
+		background: url(images/web/web02.jpg) right -200px no-repeat;		
+	}
+#cube_03:after{
+		background: url(images/web/web03.jpg) right -200px no-repeat;		
+	}
+.cube .cube_txt{		
+		-webkit-transform: rotateX(-90deg) translateZ(100px);       
+		background: #d4cbbb;
+		display: block;
+		border-radius: 10px;
+		color: #5d5d5d;
+	}	
+	
+.cube_img:hover:after{
+		opacity: 1;
+	}
+.cube_txt h4{
+		margin: 20px;		
+		font-size: 14pt;
+		line-height: 20px;
+		font-weight: 700;
+		font-family: "OCR A Std","微軟正黑體";
+	}
+.cube_txt p{
+		margin:5px 20px;		
+		font-size: 10pt;
+		line-height: 16px;
+		font-family: "OCR A Std","微軟正黑體";
+	}
+.cube_aa{
+		position:relative;
+		top:0px;
+		left:670px;		
+		display: block;
+		width: 150px;
+		height:30px;
+		line-height: 30px;
+		text-align: center;		
+}
+.cube_aa a{
+		display: block;
+		width: 150px;
+		height:30px;
+		color:#ccc;
+		background-color:#344765;
+		font-family: "OCR A Std","微軟正黑體";
+}
+.cube_aa_01 a{background-color:#344765;}
+.cube_aa_02 a{background-color:#991100;}
+.cube_aa_03 a{background-color:#333;}
+</style>
+</head>
+<body>
+	<div id="allBody">
+		<div class="header">
+			<div class="logo"><a href="index.html"><p>ZETMEI</p></a></div>
+			<nav class="navigation">
+				<li><a href="javascript:;">WEB</a>
+					<ul class="second_ul web_ul">
+						<li><a href="web_web.html">網頁作品</a></li>
+						<li><a href="web_page.html">單頁作品</a></li>
+						<li><a href="web_list_page01.html">CSS選單</a></li>
+						<li><a href="web_img_page01.html">CSS圖文</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">GRAGHIC</a>
+					<ul class="second_ul graphic_ul">
+						<li><a href="graphic_id.html">ID作品</a></li>
+						<li><a href="graphic_ps.html">PS作品</a></li>
+						<li><a href="graphic_illu.html">ILLU作品</a></li>
+						<li><a href="graphic_sketch.html">素描作品</a></li>
+					</ul>
+				</li>
+				<li><a href="ABOUT.html">ABOUT.html</a></li>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="cont_left">
+			</div>				
+			<div class="cont_right">
+				<div class="cr_in"><h3>2014 網頁作品</h3>
+				<div class="cube">
+					<div class="cube_img" id="cube_01"><img src="images/web/web01.jpg"></div>
+					<div class="cube_txt">
+						<h4>新東京宅公寓式酒店 Midtown House</h4>
+						<p>個人網頁作品</p>
+						<p>於資測會學習時的個人作品，首頁使用JQery搭配css寫出垂直滑動特效，分頁使用跳頁方式，並搭配Loading bar增加網頁活潑性</p>		
+					</div>					
+				</div>
+				<div class="cube_aa cube_aa_01"><a href="web_midtown/index.html">前往網頁</a></div>
+				<div class="cube">
+					<div class="cube_img" id="cube_02"><img src="images/web/web02.jpg"></div>
+					<div class="cube_txt">
+						<h4>好手工藝平台 Goodhand</h4>
+						<p>專題網頁作品</p>
+						<p>於資策會時期的專題作品，於專題中擔任小組長，主要負責程式部份編寫、Loading bar、部分頁面製作，作品當中使用瀑布流呈現，搭配js偵測滑鼠進入方向做色塊互動，json格式的材質分類頁面、js亂數隨機排列商品、ajax技術套用部分頁面換頁</p>
+					</div>
+				</div>
+				<div class="cube_aa cube_aa_02"><a href="web_goodhand/indexPage.htm">前往網頁</a></div>
+				<div class="cube">
+					<div class="cube_img" id="cube_03"><img src="images/web/web03.jpg"></div>
+					<div class="cube_txt">
+						<h4>個人金工作品網頁 JalinKao Jewelry </h4>
+						<p>個人網頁作品</p>
+						<p>頁面使用JQ的slider bar去做換頁效果，搭配css增加互動</p>
+					</div>
+				</div>			
+				<div class="cube_aa cube_aa_03"><a href="web_jalinkao/index.html">前往網頁</a></div>	
+        	</div>
+
+			</div>
+		</div>
+		<div class="footer">	
+			<p>COPYRIGHT©2014&nbsp;&nbsp;&nbsp;ZETMEI</br> 
+			ALL&nbsp;&nbsp;&nbsp;RIGHTS RESERVED</p>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.navigation>li').click(
+			function(){
+				$(this).children().addClass('opacity_yo')
+				$(this).siblings().children().removeClass('opacity_yo')
+				//alert('');
+			}	
+	)
+	$('.ct_nav li').click(
+			function(){
+				//alert('');
+				$(this).children().addClass('using_yo')
+				$(this).siblings().children().removeClass('using_yo')				
+			}	
+	)
+})
+//內頁展示
+$(function(){	
+	$('.cube_img').click(cube_r);
+	$('.cube_txt').click(cube_r);	
+
+    function cube_r(aa){
+    	var current=$(this).prop("id");
+    	var cla= $(this).prop("class");    	
+    	if (cla=='cube_img'){
+    		$('#'+current).parent().css({"-webkit-transform": "rotateX(89deg)"})
+    		$(this).css("opacity",.1);
+    	}
+    	else{
+    		$(this).parent().css({"-webkit-transform": "rotateX(0deg)"})
+    		$(this).siblings('.cube_img').css("opacity",1);
+    	}    	
+    }
+ });
+</script>
+</html>

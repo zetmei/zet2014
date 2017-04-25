@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZETMEI</title>
+	<link rel="shortcut icon" href="images/bg/icon.png" />
+	<link rel="stylesheet" href="css/reset(muki).css">
+	<link rel="stylesheet" href="css/frameStyle.css">
+	<link rel="stylesheet" href="css/contain.css">
+	<link href='http://fonts.googleapis.com/css?family=Michroma|Bad+Script|Play|Orbitron|Ruda|Julius+Sans+One' rel='stylesheet' type='text/css'>
+<style>
+	.cont_right{
+	display: inline-block;
+	position: absolute;
+	top:20px;
+	left:20px;
+	width:1000px;
+	height:410px;
+	background-color:#ddd;
+}
+
+</style>
+</head>
+<body>
+	<div id="allBody">
+		<div class="header">
+			<div class="logo"><a href="index.html"><p>ZETMEI</p></a></div>
+			<nav class="navigation">
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="javascript:;">WEB</a>
+					<ul class="second_ul web_ul">
+						<li><a href="web_web.html">網頁作品</a></li>
+						<li><a href="web_page.html">單頁作品</a></li>
+						<li><a href="web_list_page01.html">CSS選單</a></li>
+						<li><a href="web_img_page01.html">CSS圖文</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">GRAGHIC</a>
+					<ul class="second_ul graphic_ul">
+						<li><a href="graphic_id.html">ID作品</a></li>
+						<li><a href="graphic_ps.html">PS作品</a></li>
+						<li><a href="graphic_illu.html">ILLU作品</a></li>
+						<li><a href="graphic_sketch.html">素描作品</a></li>
+						<li><a href="graphic_other.html">其他作品</a></li>
+					</ul>
+				</li>
+				<li><a href="contact.html">CONTACT.html</a></li>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="cont_left">
+				
+			</div>				
+			<div class="cont_right"></div>
+		</div>
+		<div class="footer">	
+			<p>COPYRIGHT©2014&nbsp;&nbsp;&nbsp;ZETMEI</br> 
+			ALL&nbsp;&nbsp;&nbsp;RIGHTS RESERVED</p>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.navigation>li').click(
+			function(){
+				$(this).children().addClass('opacity_yo')
+				$(this).siblings().children().removeClass('opacity_yo')
+				//alert('');
+			}	
+	)
+	$('.ct_nav li').click(
+			function(){
+				//alert('');
+				$(this).children().addClass('using_yo')
+				$(this).siblings().children().removeClass('using_yo')
+				
+			}	
+	)
+})
+</script>
+</html>

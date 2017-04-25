@@ -1,0 +1,198 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://www.gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+$(window).load(function() {	
+	setTimeout(function(){$(".loader").fadeOut("slow");}, 2000);
+})
+</script>
+<link rel="stylesheet" href="css/reset(muki).css">
+<link href='http://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Niconne|Alex+Brush|Sacramento|Norican' rel='stylesheet' type='text/css'>
+<link href="css/lightbox.css" rel="stylesheet" />
+<style>
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('images/loadingbar.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+/*可用字型
+font-family: 'Bilbo Swash Caps', cursive;
+font-family: 'Niconne', cursive;
+font-family: 'Alex Brush', cursive;
+font-family: 'Sacramento', cursive;
+font-family: 'Norican', cursive;*/
+/*----------全部排版---------*/
+.page_both{
+	width:1280px;
+	min-height:1006px;
+	background:#546D5A;
+	margin:0 auto;
+	position:relative;
+	}
+.page_left{
+	width:280px;
+	min-height:1000px;
+	position:relative;
+	float:left;
+	}
+.page_right{
+	width:970px;
+	min-height:1000px;
+	background:#F9F6EF;
+	position:relative;
+	float:left;
+	box-shadow:-1px 0 20px 10px #000; 
+	}
+
+/*----------左邊排版----------*/
+.logo{
+	width:170px;
+	height:190px;
+	position:relative;
+	margin:0 auto 55px auto;
+	}
+ul{
+	width:160px;
+	height:240px;
+	position:relative;
+	margin:0 auto;
+	
+	}	
+li{
+	width: 160px;
+	height: 40px;
+	background: url(images/bottom.png) no-repeat;
+	list-style-type: none;
+	padding:0 0 20px 0;
+	}
+li a{
+	width: 160px;
+	height: 40px;
+	display: block;
+	color: #546D5A;
+	line-height: 37px;
+	text-decoration: none;
+	text-align: center;
+	font-family: "微軟正黑體";
+	font-size:14px;
+	text-shadow:0px .5px 0px #CCC,0px .7px 0px #999;
+	}
+li a:visited{
+	color:#546D5A;
+	}
+li.now a{
+	color:#898989;
+	}
+/*------------右邊排版--------------*/
+.right01{
+	width: 600px;
+	height: 100px;
+	/*background: #ccc;*/
+	margin: 10px auto 10px auto;
+	text-align: center;
+	line-height:160px;
+	border-bottom:3px double #898989;
+	}
+.right02{
+	width:600px;
+	height:700px;
+	/*background:#ccc;*/
+	margin:40px auto 40px auto;
+	text-align: center;
+	}
+.right03{
+	width: 600px;
+	height: 100px;
+	margin: 10px auto 10px auto;
+	text-align: center;
+	border-top:3px double #898989;
+	}
+.right_tt{
+	font-size:50px;
+	font-family: 'Niconne', cursive;
+	color:#4D2626;
+	/*font-family: 'Alex Brush', cursive;*/
+	
+	/*font-family: 'Norican', cursive;
+/*	font-weight: bolder;*/
+	}
+/*---右邊底下格---*/
+.r3{
+	color:#898989;
+	font-family:"微軟正黑體"
+	}
+	
+/*右邊內容*/
+.right02 img{
+	width:180px;
+	height:180px;
+		
+	}
+.build_intro{
+	display:inline-block;
+	width:140px;
+	padding:20px;
+	height:140px;
+	background:#333333;
+	position:relative;
+	}
+.build_intro p{
+	width:140px;
+	position:absolute;
+	top:35px;
+	line-height:30px;
+	font-size:16px;
+	color:#FFFFFF;
+	font-family:'微軟正黑體';
+	text-vertical:bottom;
+	
+	}
+</style>
+</head>
+
+<body>
+<div class="loader"></div>
+<div>
+	<div class="page_both">
+		<div class="page_left">
+        	<div class="logo"><a href="01-index.html"><img src="images/LOGO01.png" width="170" height="195"></a></div>
+            <ul>
+                 <li><a href="02.html" >房間介紹</a></li>
+                 <li class="now"><a href="03.html">大樓設施</a></li>
+                 <li><a href="04.html">線上訂房</a></li>
+             </ul>            
+        </div> 
+        <div class="page_right">
+        	<div class="right01">
+        	  <p class="right_tt">BuilDing Service</p>
+        	</div>
+            <div class="right02">
+            	<a href="images/building/build_01.jpg" data-lightbox="album-3" title="My caption"><img src="images/building_a/build_01a.jpg"></a>
+				<div class="build_intro"><p>提供停車位</br>嚴謹的保全</br>公共休息室</p></div>
+                <a href="images/building/build_02.jpg" data-lightbox="album-3" title="My caption"><img src="images/building_a/build_02a.jpg"></a><br>
+                <a href="images/building/build_03.jpg" data-lightbox="album-3" title="My caption"><img src="images/building_a/build_03a.jpg"></a>
+				<a href="images/building/build_04.JPG" data-lightbox="album-3" title="My caption"><img src="images/building_a/build_04a.jpg"></a>
+				<div class="build_intro"><p>會議室<br>健身房<br>游泳池</p></div><br>
+          </div>
+            <div class="right03">
+            	<p class="r3">台北市南京東路2段108號 </p>
+                <p  class="r3"><a href="mailto:jamekao@hotmail.com">jamekao@hotmail.com</a><br>
+                02-0000-0000</p>
+            </div>
+        </div>
+    </div>
+  
+</div>
+</body>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/lightbox-2.6.min.js"></script>
+</html>

@@ -1,0 +1,66 @@
+///****置作網頁步驟****///
+OK--選單決定(架構)
+OK--打稿，訂定網站內容(文案)
+
+
+--版型決定(滿版、單頁捲動、寬高訂定)
+
+--特效決定
+
+--配色風格決定
+	風格:視覺強烈印象、個性化
+		 但又該簡潔一點，凸顯作品內容 
+	
+	顏色:黃黑
+	字型:font-family: "OCR A Std","微軟正黑體";
+
+--小物件小圖案決定
+
+--方塊長寬
+大的=820*200
+小的=380*95
+
+
+
+
+
+///*****詳細*****////
+白色	#F1F6F9
+藍綠	#3F8386
+淺藍綠	#A3C1C3
+黃色	#DDD23C
+深灰	#565656
+
+清新橘	#E8B170
+清新藍	#68AAA6
+清新灰	#E2E2E2
+深灰	#6D6D6D
+
+淡淡綠	#91B493
+清新綠	#91B44C
+
+///****其他****///
+青綠	#41A62A
+///****小專題色參考****///
+主色紅色:#991100
+流程圖咖啡色:#3A2503
+
+金屬黃:#E6B422
+木質橘:#F38B18
+玻璃藍:#057298
+陶瓷藍綠:#03AFAE
+皮件粉紅:#EB8477
+
+
+**字型
+	font-family: 'Michroma', sans-serif;
+	font-family: 'Bad Script', cursive;
+	font-family: 'Play', sans-serif;
+	font-family: 'Orbitron', sans-serif;
+	font-family: 'Ruda', sans-serif;
+	font-family: 'Julius Sans One', sans-serif;
+
+	font-family: "OCR A Std","微軟正黑體";
+	font-family:'Impact','微軟正黑體';	
+}
+

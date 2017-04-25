@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZETMEI</title>
+	<link rel="shortcut icon" href="images/bg/icon.png" />
+	<link rel="stylesheet" href="css/reset(muki).css">
+	<link rel="stylesheet" href="css/frameStyle.css">
+	<link rel="stylesheet" href="css/contain.css">
+	<link rel="stylesheet" href="css/contain_img.css">
+	<link href='http://fonts.googleapis.com/css?family=Michroma|Bad+Script|Play|Orbitron|Ruda|Julius+Sans+One' rel='stylesheet' type='text/css'>
+<style>
+/*-------左頁點擊頁-----*/
+.ct_nav li:nth-child(3){
+	font-weight: 700;
+	color:#fff;
+	background-color:#D98080;
+}
+.ct_nav li:nth-child(3) a{
+	color:#fff;
+}
+
+/*圖文互動*/
+.img_ul{
+	position: absolute;
+	top:105px;
+	left:105px;
+	width:600px;
+	height:200px;
+	/*background-color: #111;*/
+}
+/*------------------第二種:滑動遮罩(斜)------------------------*/
+.img_li{
+	position:relative;
+	height:150px;
+	width:150px;
+	display:inline-block;
+	margin-right:20px; 
+	overflow:hidden;
+	}
+.li_pic{
+	position:absolute;
+	top:0;
+	left:0;
+	height:150px;
+	width:150px;
+	}
+.li_mask{
+	position:absolute;
+	top:60px;
+	left:50px;
+	height:200px;
+	width:320px;
+	padding:0 0 20px 0;
+	box-shadow:inset 0 0 10px #000;			
+	-webkit-transform:rotate(-45deg);
+	-moz-transform:rotate(-45deg);		
+	transform:rotate(-45deg);
+	transition:0s 0s;
+
+	background:#069;			
+	color:#FFF;
+	text-align:center;
+	}
+.li_txt01{
+	position:absolute;
+/*		top:20px;
+	left:200px;*/
+	z-index:5;
+	transition:0s 0s;
+	opacity: 0;
+	color:#FFF;
+	font-family:"微軟正黑體";
+	text-align:center;
+}
+.img_ul p{
+	color:#bbb;
+}
+.li_txt02{
+	position:absolute;
+	top:120px;
+	left:110px;
+	z-index:4;
+	transition:0s 0s; 
+
+	font-family:"微軟正黑體";
+	font-size:20px;
+}	
+.img_li a{
+	display:block;
+	height:150px;
+	width:150px;
+}
+.img_li a:hover .li_mask{
+	top:0px;
+	left:-60px;
+	transition:1s;
+	background:rgba(0,0,0,.8);	
+	}
+.img_li a:hover .li_txt01{
+	top:40px;
+	left:20px;
+	opacity: .8;
+	transition:1s .3s;
+	}
+.img_li a:hover .li_txt02{
+	opacity:0;
+	transition:.5s; 
+	}
+</style>
+</head>
+<body>
+	<div id="allBody">
+		<div class="header">
+			<div class="logo"><a href="index.html"><p>ZETMEI</p></a></div>
+			<nav class="navigation">
+				<li><a href="javascript:;">WEB</a>
+					<ul class="second_ul web_ul">
+						<li><a href="web_web.html">網頁作品</a></li>
+						<li><a href="web_page.html">單頁作品</a></li>
+						<li><a href="web_list_page01.html">CSS選單</a></li>
+						<li><a href="web_img_page01.html">CSS圖文</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">GRAGHIC</a>
+					<ul class="second_ul graphic_ul">
+						<li><a href="graphic_id.html">ID作品</a></li>
+						<li><a href="graphic_ps.html">PS作品</a></li>
+						<li><a href="graphic_illu.html">ILLU作品</a></li>
+						<li><a href="graphic_sketch.html">素描作品</a></li>
+					</ul>
+				</li>
+				<li><a href="ABOUT.html">ABOUT.html</a></li>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="cont_left">
+				<p>css圖文</p>
+				<ul class="ct_nav">
+					<li><a href="web_img_page01.html">SAMPLE01</a></li>
+					<li><a href="web_img_page02.html">SAMPLE02</a></li>
+					<li><a href="web_img_page03.html">SAMPLE03</a></li>
+					<li><a href="web_img_page04.html">SAMPLE04</a></li>
+					<li><a href="web_img_page05.html">SAMPLE05</a></li>
+					<li><a href="web_img_page06.html">SAMPLE06</a></li>
+					<li><a href="web_img_page07.html">SAMPLE07</a></li>
+					<li><a href="web_img_page08.html">SAMPLE08</a></li>
+					<li><a href="web_img_page09.html">SAMPLE09</a></li>
+					<li><a href="web_img_page10.html">SAMPLE10</a></li>
+				</ul>
+			</div>				
+			<div class="cont_right">
+				<h3>+CSS圖片說明互動</h3>
+				<p>&nbsp; 使用CSS寫的特效，滑鼠hover上移搭配互動</p> <!--第二個-->
+				<ul class="img_ul">
+					<li class="img_li"><a href="javascript:;">
+						<span class="li_pic"><img src="images/img/m01.jpg" width="150" height="150"></span>
+						 <span class="li_txt01">
+								 <p>bibichuchu</br>
+							      cat</br>
+							      by ZETMEI</p>
+						 </span>
+					     <span class="li_txt02">
+					          <p>cat</p>
+					     </span>
+						<span class="li_mask"></span>
+					    </a>
+					</li>
+					<li class="img_li"><a href="javascript:;">
+						<span class="li_pic"><img src="images/img/m01.jpg" width="150" height="150"></span>
+						 <span class="li_txt01">
+								 <p>bibichuchu</br>
+							      cat</br>
+							      by ZETMEI</p>
+						 </span>
+					     <span class="li_txt02">
+					          <p>cat</p>
+					     </span>
+						<span class="li_mask"></span>
+					    </a>
+					</li>
+					<li class="img_li"><a href="javascript:;">
+						<span class="li_pic"><img src="images/img/m01.jpg" width="150" height="150"></span>
+						 <span class="li_txt01">
+								 <p>bibichuchu</br>
+							      cat</br>
+							      by ZETMEI</p>
+						 </span>
+					     <span class="li_txt02">
+					          <p>cat</p>
+					     </span>
+						<span class="li_mask"></span>
+					    </a>
+					</li>
+				</ul>					
+
+			</div>
+		</div>
+		<div class="footer">	
+			<p>COPYRIGHT©2014&nbsp;&nbsp;&nbsp;ZETMEI</br> 
+			ALL&nbsp;&nbsp;&nbsp;RIGHTS RESERVED</p>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.navigation>li').click(
+			function(){
+				$(this).children().addClass('opacity_yo')
+				$(this).siblings().children().removeClass('opacity_yo')
+				//alert('');
+			}	
+	)
+	$('.ct_nav li').click(
+			function(){
+				//alert('');
+				$(this).children().addClass('using_yo')
+				$(this).siblings().children().removeClass('using_yo')
+				
+			}	
+	)
+	// $('.list1 li').click(
+	// 		function(){
+	// 			$(this).addClass('aa li::after')
+	// 			$(this).siblings().removeClass('aa li::after')
+	// 			//alert('');
+	// 		}	
+	// )
+})
+</script>
+</html>

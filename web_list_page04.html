@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZETMEI</title>
+	<link rel="shortcut icon" href="images/bg/icon.png" />
+	<link rel="stylesheet" href="css/reset(muki).css">
+	<link rel="stylesheet" href="css/frameStyle.css">
+	<link rel="stylesheet" href="css/contain.css">
+	<link rel="stylesheet" href="css/contain_list.css">
+	<link href='http://fonts.googleapis.com/css?family=Michroma|Bad+Script|Play|Orbitron|Ruda|Julius+Sans+One' rel='stylesheet' type='text/css'>
+<style>
+/*-------左頁點擊頁-----*/
+.ct_nav li:nth-child(4){
+	font-weight: 700;
+	color:#fff;
+	background-color:#68AAA6;
+}
+.ct_nav li:nth-child(4) a{
+	color:#fff;
+}
+/*-----選單css----*/
+.list1{
+	position:absolute;
+	top:30%;
+	left:5%;
+	width: auto;
+	height:40px;
+	/*background-color: #E2E2E2;*/
+	padding:10px;
+	letter-spacing:30px;
+}
+.list1 li{
+	position: relative;
+	display:inline-block;
+	width:150px;
+	height:30px;
+	background-color:#EB8477;
+	letter-spacing:5px;
+	transition:.3s;
+
+	font-weight: 700;
+	/*text-shadow:0px 1px 0px #FBFBFB;*/
+	text-align: center;
+	line-height: 30px;
+}
+.list1 li span:first-child{
+	position: absolute;
+	top: 0px;
+	left:-30px;
+	content: '';
+	display: block;
+	width:0px;
+	height:0px;		
+	border: 15px solid #fff;
+	border-color:transparent #EB8477 transparent transparent;
+	transition:.3s;
+}
+.list1 li span:last-child{
+	position: absolute;
+	top: 0px;
+	left:135px;
+	content: '';
+	display: block;
+	width:0px;
+	height:0px;		
+	border: 15px solid #fff;
+	border-color: #EB8477 transparent  #EB8477 transparent;
+	transition:.3s;
+}
+.list1 li:hover{
+	background-color:#991100;
+}
+.list1 li:hover span:first-child{
+	border-color:transparent #991100 transparent transparent;
+}
+.list1 li:hover span:last-child{
+	border-color: #991100 transparent  #991100 transparent;
+}
+.list1 li:before{
+	position: absolute;
+	top: 10px;
+	left:2px;
+	content: '';
+	display: block;
+	width:10px;
+	height:10px;
+	border-radius: 50%;	
+	background-color:#ddd;}
+/*三角形小標籤變化*/
+/*
+border-color:#f00 transparent transparent transparent;小箭頭
+border-color:#f00 #f00 transparent #f00;小旗子
+border-color:#f00 transparent #f00 transparent;沙漏
+*/
+.aa::after{
+	position: absolute;
+	top: 0px;
+	left:2px;
+	content: '';
+	display: block;
+	width:0px;
+	height:10px;		
+	border: 10px solid #fff;
+	border-color:#F38B18 #F38B18 transparent #F38B18;	
+}
+
+.list1 li a{
+	display:block;
+	width:100%;
+	height:100%;	
+}
+.list1 li a:link, 
+.list1 li a:visited ,
+.list1 li a :hover ,
+.list1 li a :active {color:#fff;}
+</style>
+</head>
+<body>
+	<div id="allBody">
+		<div class="header">
+			<div class="logo"><a href="index.html"><p>ZETMEI</p></a></div>
+			<nav class="navigation">
+				<li><a href="javascript:;">WEB</a>
+					<ul class="second_ul web_ul">
+						<li><a href="web_web.html">網頁作品</a></li>
+						<li><a href="web_page.html">單頁作品</a></li>
+						<li><a href="web_list_page01.html">CSS選單</a></li>
+						<li><a href="web_img_page01.html">CSS圖文</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">GRAGHIC</a>
+					<ul class="second_ul graphic_ul">
+						<li><a href="graphic_id.html">ID作品</a></li>
+						<li><a href="graphic_ps.html">PS作品</a></li>
+						<li><a href="graphic_illu.html">ILLU作品</a></li>
+						<li><a href="graphic_sketch.html">素描作品</a></li>
+					</ul>
+				</li>
+				<li><a href="ABOUT.html">ABOUT.html</a></li>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="cont_left">
+				<p>css選單</p>
+				<ul class="ct_nav">
+					<li><a href="web_list_page01.html">SAMPLE01</a></li>
+					<li><a href="web_list_page02.html">SAMPLE02</a></li>
+					<li><a href="web_list_page03.html">SAMPLE03</a></li>
+					<li><a href="web_list_page04.html">SAMPLE04<a></li>
+					<li><a href="web_list_page05.html">SAMPLE05</a></li>
+					<li><a href="web_list_page06.html">SAMPLE06</a></li>
+					<li><a href="web_list_page07.html">SAMPLE07</a></li>
+					<li><a href="web_list_page08.html">SAMPLE08</a></li>
+					<li><a href="web_list_page09.html">SAMPLE09</a></li>
+					<li><a href="web_list_page10.html">SAMPLE10</a></li>
+				</ul>
+			</div>				
+			<div class="cont_right">
+				<h3>+純CSS選單</h3>
+				<p>&nbsp; 全部使用CSS寫的選單，滑鼠hover上移搭配互動</p>
+				<ul class="list1">
+					<li class="aaa"><a href="javascript:;">第一頁<span></span><span></span></a></li>
+					<li class="aaa"><a href="javascript:;">第二頁<span></span><span></span></a></li>
+					<li class="aaa"><a href="javascript:;">第三頁<span></span><span></span></a></li>
+					<li class="aaa"><a href="javascript:;">第四頁<span></span><span></span></a></li>					
+				</ul>
+			</div>
+		</div>
+		<div class="footer">	
+			<p>COPYRIGHT©2014&nbsp;&nbsp;&nbsp;ZETMEI</br> 
+			ALL&nbsp;&nbsp;&nbsp;RIGHTS RESERVED</p>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.navigation>li').click(
+			function(){
+				$(this).children().addClass('opacity_yo')
+				$(this).siblings().children().removeClass('opacity_yo')
+				//alert('');
+			}	
+	)
+	$('.ct_nav li').click(
+			function(){
+				//alert('');
+				$(this).children().addClass('using_yo')
+				$(this).siblings().children().removeClass('using_yo')
+				
+			}	
+	)
+	$('.list1 li').click(
+			function(){
+				$(this).addClass('aa li::after')
+				$(this).siblings().removeClass('aa li::after')
+				//alert('');
+			}
+	)	
+})
+</script>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZETMEI</title>
+	<link rel="shortcut icon" href="images/bg/icon.png" />
+	<link rel="stylesheet" href="css/reset(muki).css">
+	<link rel="stylesheet" href="css/frameStyle.css">
+	<link rel="stylesheet" href="css/contain.css">
+	<link rel="stylesheet" href="css/contain_list.css">
+	<link href='http://fonts.googleapis.com/css?family=Michroma|Bad+Script|Play|Orbitron|Ruda|Julius+Sans+One' rel='stylesheet' type='text/css'>
+<style>
+/*-------左頁點擊頁-----*/
+.ct_nav li:nth-child(6){
+	font-weight: 700;
+	color:#fff;
+	background-color:#68AAA6;
+}
+.ct_nav li:nth-child(6) a{
+	color:#fff;
+}
+/*-----選單css----*/
+.list4{
+	position:absolute;
+	top:30%;
+	left:5%;
+	width:auto;
+	}
+.list4>li{	
+	position:relative;	
+	display:inline-block;
+	}	
+.list4 > li > a{					/*訂正*/
+	display:inline-block;
+	width:100px;
+	height:50px;
+	background:#09C;
+	line-height:50px;
+	color:#FFF;
+	text-decoration:none;
+	text-align:center;	
+	}
+.list4 .list_ii{						/*訂正*/
+	position:absolute;
+	/*display:none;*/
+	background:#CCC;
+	width:100%;					/*訂正*/
+	list-style-type: none;
+	text-align: center;
+	display:block;
+	opacity:0;
+	left:-3000px;
+	transition:opacity 1s,left 0 1s;
+	}
+.list4 .list_ii a{
+	text-decoration: none;
+	color: #FFF;
+	}
+.list4>li:hover .list_ii{
+	/*display:block;*/
+	left:0;
+	opacity:1;
+	transition:opacity 1s;
+	}
+</style>
+</head>
+<body>
+	<div id="allBody">
+		<div class="header">
+			<div class="logo"><a href="index.html"><p>ZETMEI</p></a></div>
+			<nav class="navigation">
+				<li><a href="javascript:;">WEB</a>
+					<ul class="second_ul web_ul">
+						<li><a href="web_web.html">網頁作品</a></li>
+						<li><a href="web_page.html">單頁作品</a></li>
+						<li><a href="web_list_page01.html">CSS選單</a></li>
+						<li><a href="web_img_page01.html">CSS圖文</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">GRAGHIC</a>
+					<ul class="second_ul graphic_ul">
+						<li><a href="graphic_id.html">ID作品</a></li>
+						<li><a href="graphic_ps.html">PS作品</a></li>
+						<li><a href="graphic_illu.html">ILLU作品</a></li>
+						<li><a href="graphic_sketch.html">素描作品</a></li>
+					</ul>
+				</li>
+				<li><a href="ABOUT.html">ABOUT.html</a></li>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="cont_left">
+				<p>css選單</p>
+				<ul class="ct_nav">
+					<li><a href="web_list_page01.html">SAMPLE01</a></li>
+					<li><a href="web_list_page02.html">SAMPLE02</a></li>
+					<li><a href="web_list_page03.html">SAMPLE03</a></li>
+					<li><a href="web_list_page04.html">SAMPLE04</a></li>
+					<li><a href="web_list_page05.html">SAMPLE05</a></li>
+					<li><a href="web_list_page06.html">SAMPLE06</a></li>
+					<li><a href="web_list_page07.html">SAMPLE07</a></li>
+					<li><a href="web_list_page08.html">SAMPLE08</a></li>
+					<li><a href="web_list_page09.html">SAMPLE09</a></li>
+					<li><a href="web_list_page10.html">SAMPLE10</a></li>
+				</ul>
+			</div>				
+			<div class="cont_right">
+				 <h3>+純CSS選單</h3>
+				<p>&nbsp; 全部使用CSS寫的選單，滑鼠hover上移搭配互動
+				</br>&nbsp; 次選單使用淡入淡出顯示</p>
+				 <ul class="list4">
+					  <li><a href="#">第一頁</a>
+					    <ul class="list_ii">
+					      <li><a href="#">1-1</a></li>
+					      <li><a href="#">1-2</a></li>
+					      <li><a href="#">1-3</a></li>
+					      <li><a href="#">1-4</a></li>
+					    </ul>
+					  </li>
+					  <li><a href="#">第二頁 
+					    </a>
+					    <ul class="list_ii">
+					      <li><a href="#">1-1</a></li>
+					      <li><a href="#">1-2</a></li>
+					      <li><a href="#">1-3</a></li>
+					      <li><a href="#">1-4</a></li>
+					    </ul>
+					  </li>
+					  <li><a href="#">第三頁
+					  	 <ul class="list_ii">
+					      <li><a href="#">1-1</a></li>
+					      <li><a href="#">1-2</a></li>
+					      <li><a href="#">1-3</a></li>
+					      <li><a href="#">1-4</a></li>
+					    </ul> </a>
+					  </li>
+					  <li><a href="#">第四頁
+						   <ul class="list_ii">
+						      <li><a href="#">1-1</a></li>
+						      <li><a href="#">1-2</a></li>
+						      <li><a href="#">1-3</a></li>
+						      <li><a href="#">1-4</a></li>
+						    </ul></a>
+					  </li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">	
+			<p>COPYRIGHT©2014&nbsp;&nbsp;&nbsp;ZETMEI</br> 
+			ALL&nbsp;&nbsp;&nbsp;RIGHTS RESERVED</p>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.navigation>li').click(
+			function(){
+				$(this).children().addClass('opacity_yo')
+				$(this).siblings().children().removeClass('opacity_yo')
+				//alert('');
+			}	
+	)
+	$('.ct_nav li').click(
+			function(){
+				//alert('');
+				$(this).children().addClass('using_yo')
+				$(this).siblings().children().removeClass('using_yo')
+				
+			}	
+	)	
+})
+</script>
+</html>

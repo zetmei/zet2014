@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://dl.dropboxusercontent.com/u/9545926/2014/js_q/homework_hint.htm -->
+<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+	<meta charset="UTF-8">
+	<title>Homework Hint</title>
+	<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+	<style type="text/css">
+	.clock {
+		position: relative;
+	}
+	.clock-bg {
+		position: absolute;
+		width: 300px;
+		height: 300px;
+		left: 0;
+		top: 0;
+		background:url(img/cc.jpg) 0px 0px no-repeat;	
+		border-radius: 50%;
+	}
+	.clock-bg::after{
+		content: '';
+		display: block;
+		border-radius: 50%;
+		background-color: #111;
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		left: 144px;
+		top: 144px;
+	}
+	.hand {
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		left: 150px;
+		top: 150px;
+	}
+	.sec-hand {
+		background:url(img/03.gif) 0px 0px no-repeat;	
+		position: absolute;
+		width: 10px;
+		height: 150px;
+		left: -10px;
+		top: -124px;
+	}
+	.mm-hand {
+		background:url(img/02.gif) 0px 0px no-repeat;	
+		position: absolute;
+		width: 20px;
+		height: 120px;
+		left: 	-12px;
+		top: -122px;
+	}
+	.hh-hand {
+		background:url(img/01.gif) 0px 0px no-repeat;
+		position: absolute;
+		width: 25px;
+		height: 90px;
+		left: -17px;
+		top: -90px;
+	}
+
+	</style>
+</head>
+<body style="">
+	<div class="clock">
+		<div class="clock-bg"></div>
+		<div class="hand" id="sechand" style="-webkit-transform: rotate(324deg);">
+			<div class="sec-hand"></div>
+		</div>
+        <div class="hand" id="mmhand" style="-webkit-transform: rotate(324deg);">
+			<div class="mm-hand"></div>
+		</div>
+        <div class="hand" id="hhhand" style="-webkit-transform: rotate(324deg);">
+			<div class="hh-hand"></div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		function rotateSomething(something, degree) {
+			var i,
+			attrs = [
+				'-webkit-transform',
+				'-moz-transform',
+				'-ms-transform',
+				'-o-transform',
+				'transform'
+			];
+			for(i=0; i< attrs.length; i++) {
+				something.css( attrs[i], 'rotate('+ degree +'deg)');
+			}
+		}
+
+		function runClock() {
+			var now = new Date();
+			var sec = now.getSeconds();					
+			rotateSomething( $('#sechand') , sec * 6);			
+		}
+		setInterval(runClock, 1000);
+		
+		function runClock01() {
+			var now = new Date();			
+			var mm = now.getMinutes();	
+			//alert("132");		
+			rotateSomething( $('#mmhand') , mm * 6);
+		}
+		setInterval(runClock01, 1000);
+		
+		function runClock03() {
+			var now = new Date();			
+			var mm = now.getMinutes();	
+			var hh = now.getHours();	
+			//alert("132");		
+			rotateSomething( $('#hhhand') , hh * 30+(mm/2));
+		}
+		setInterval(runClock03, 1000);
+	</script>
+
+</body></html>

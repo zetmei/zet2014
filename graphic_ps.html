@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZETMEI</title>
+	<link rel="shortcut icon" href="images/bg/icon.png" />
+	<link rel="stylesheet" href="css/reset(muki).css">
+	<link rel="stylesheet" href="css/frameStyle.css">
+	<link rel="stylesheet" href="css/contain.css">
+	<link href='http://fonts.googleapis.com/css?family=Michroma|Bad+Script|Play|Orbitron|Ruda|Julius+Sans+One' rel='stylesheet' type='text/css'>
+	<!-- js JQ使用1.9.0版本 -->
+	<script src="js/jquery-1.9.0.min.js"></script>
+	<!-- js 滑鼠滾光圈 -->
+	<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="lightbox/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="lightbox/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="lightbox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="lightbox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	<style>
+.cont_right{
+	display: inline-block;
+	position: absolute;
+	top:20px;
+	left:20px;
+	width:1000px;
+	height:410px;
+	background-color:#fff;
+}
+.cont_right_02{
+	left:490px;
+}
+.footer{	
+	position:absolute;
+	top:1050px;
+	width:1024px;
+	height:50px;
+	background-color:#fff;	
+	padding:10px; 
+	border-top:1px solid #000;
+}
+/*----*/
+.cr_in{
+		position: absolute;
+		top: 20px;
+		left:80px;
+		width: 950px;
+		height: 450px; 
+		/*border-top: 1px solid rgba(0,0,0,.2);*/
+		padding: 10px 0;	
+		/*background-color: #f00;	*/
+	}
+.cr_in h3{
+		position: absolute;
+		top:-15px;
+		left:0px;
+		font-size: 16px;
+		font-family: "OCR A Std","微軟正黑體";
+		color: #4d4d4d;
+		height: 20px;
+		line-height: 20px;
+		padding:0 10px;
+		border-right: 1px solid rgba(0,0,0,.2);
+	}
+/*下方ul對齊*/
+.cont_right .cr_in ul{
+	position: absolute;	
+	width: 1200px;
+}
+.PsUl_01{	top: 30px;	left: 20px;}
+.PsUl_02{	top: 230px;	left: 20px;}
+.PsUl_03{	top: 430px;	left: 20px;}
+.PsUl_04{	top: 630px;	left: 20px;}
+.PsUl_05{	top: 830px;	left: 20px;}
+.cr_in ul li{
+	float: left;
+	position: relative;
+	margin-left: 20px;
+}
+.cr_in ul li a{
+	display:inline-block;
+	position:relative;		
+}
+.cr_in ul li a span{
+	position: absolute;
+	display:inline-block;
+	top:0;
+	left:0;	
+	opacity: 0;
+	-webkit-transition: opacity 1s;
+}
+/*想做hover黑框、有空再弄*/
+/*.cr_in ul li a span:hover .cr_in ul li span{
+	border:3px solid #000; 
+}*/
+.cr_in ul li a span:hover{
+	opacity: 1;
+}
+/*照片內容*//*.PsUl_01 li a=.Ps_01*/
+/*第一排1-4*/
+.Ps_01{
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_cp01.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_01 span{
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_cp01.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_02 {
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_cp02.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_02 span {
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_cp02.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_03{
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_cp03.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_03 span{
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_cp03.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_04{
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_cp04.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_04 span{
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_cp04.jpg) no-repeat;
+	background-position:  bottom center;
+}
+/*第二排內容6-8*/
+.Ps_06{
+	width:100px;
+	height:150px;
+	background: url(images/ps/ps_rt01.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_06 span{
+	width:100px;
+	height:150px;
+	background: url(images/ps/ps_rt01.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_07 {
+	width:100px;
+	height:150px;
+	background: url(images/ps/ps_rt02.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_07 span {
+	width:100px;
+	height:150px;
+	background: url(images/ps/ps_rt02.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_08{
+	width:209px;
+	height:150px;
+	background: url(images/ps/ps_rt03.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_08 span{
+	width:209px;
+	height:150px;
+	background: url(images/ps/ps_rt03.jpg) no-repeat;
+	background-position:  bottom center;
+}
+
+/*第三排10-13*/
+.Ps_10{
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_rb01.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_10 span{
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_rb01.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_11 {
+	width:98px;
+	height:150px;
+	background: url(images/ps/ps_rb02.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_11 span {
+	width:98px;
+	height:150px;
+	background: url(images/ps/ps_rb02.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_12{
+	width:120px;
+	height:150px;
+	background: url(images/ps/ps_rb03.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_12 span{
+	width:120px;
+	height:150px;
+	background: url(images/ps/ps_rb03.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_13{
+	width:120px;
+	height:150px;
+	background: url(images/ps/ps_rb04.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_13 span{
+	width:120px;
+	height:150px;
+	background: url(images/ps/ps_rb04.jpg) no-repeat;
+	background-position:  bottom center;
+}
+/*第四排15-19*/
+.Ps_15{
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_tip01.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_15 span{
+	width:107px;
+	height:150px;
+	background: url(images/ps/ps_tip01.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_16 {
+	width:106px;
+	height:150px;
+	background: url(images/ps/ps_tip02.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_16 span {
+	width:106px;
+	height:150px;
+	background: url(images/ps/ps_tip02.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_17{
+	width:120px;
+	height:150px;
+	background: url(images/ps/ps_tip03.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_17 span{
+	width:120px;
+	height:150px;
+	background: url(images/ps/ps_tip03.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_18{
+	width:120px;
+	height:150px;
+	background: url(images/ps/ps_tip04.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_18 span{
+	width:120px;
+	height:150px;
+	background: url(images/ps/ps_tip04.jpg) no-repeat;
+	background-position:  bottom center;
+}
+.Ps_19{
+	width:221px;
+	height:150px;
+	background: url(images/ps/ps_tip05.jpg) no-repeat;
+	background-position:  top center;
+}
+.Ps_19 span{
+	width:221px;
+	height:150px;
+	background: url(images/ps/ps_tip05.jpg) no-repeat;
+	background-position:  bottom center;
+}
+/*文字圖框*/
+.Ps_txt_01{
+	float: left;
+	position: relative;
+	margin-left: 20px;
+	display: inline-block;
+	width:300px;
+	height:150px;
+	background:  url(images/ps/txt_01.png) no-repeat;
+	}
+.Ps_txt_02{
+	float: left;
+	position: relative;
+	margin-left: 20px;
+	display: inline-block;
+	width:300px;
+	height:150px;
+	background:  url(images/ps/txt_02.png) no-repeat;
+}
+.Ps_txt_03{
+	float: left;
+	position: relative;
+	margin-left: 20px;
+	display: inline-block;
+	width:300px;
+	height:150px;
+	background:  url(images/ps/txt_03.png) no-repeat;
+}
+.Ps_txt_04{
+	float: left;
+	position: relative;
+	margin-left: 20px;
+	display: inline-block;
+	width:300px;
+	height:150px;
+	background:  url(images/ps/txt_04.png) no-repeat;
+}
+</style>
+</head>
+<body>
+	<div id="allBody">
+		<div class="header">
+			<div class="logo"><a href="index.html"><p>ZETMEI</p></a></div>
+			<nav class="navigation">
+				<li><a href="javascript:;">WEB</a>
+					<ul class="second_ul web_ul">
+						<li><a href="web_web.html">網頁作品</a></li>
+						<li><a href="web_page.html">單頁作品</a></li>
+						<li><a href="web_list_page01.html">CSS選單</a></li>
+						<li><a href="web_img_page01.html">CSS圖文</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">GRAGHIC</a>
+					<ul class="second_ul graphic_ul">
+						<li><a href="graphic_id.html">ID作品</a></li>
+						<li><a href="graphic_ps.html">PS作品</a></li>
+						<li><a href="graphic_illu.html">ILLU作品</a></li>
+						<li><a href="graphic_sketch.html">素描作品</a></li>
+					</ul>
+				</li>
+				<li><a href="ABOUT.html">ABOUT.html</a></li>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="cont_left"></div>				
+			<div class="cont_right">
+				<div class="cr_in"><h3>2014 PhotoShop作品</h3>
+					<ul class="PsUl_01">
+ 						<li><a class="Ps_01 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps01.jpg"><span></span></a></li>
+					    <li><a class="Ps_02 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps02.jpg"><span></span></a></li>
+					    <li><a class="Ps_03 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps03.jpg"><span></span></a></li>
+					    <li><a class="Ps_04 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps04.jpg"><span></span></a></li>
+					    <li class="Ps_txt_01"><span></span></li>      
+			        </ul>	
+			        <ul class="PsUl_02">
+				        <li class="Ps_txt_02"><span></span></li> 
+					    <li><a class="Ps_06 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps14.jpg"><span></span></a></li>
+					    <li><a class="Ps_07 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps15.jpg"><span></span></a></li>
+					    <li><a class="Ps_08 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps16.jpg"><span></span></a></li>					       
+			        </ul>			
+			         <ul class="PsUl_03">
+					    <li><a class="Ps_10 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps10.jpg"><span></span></a></li>
+					    <li><a class="Ps_11 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps11.jpg"><span></span></a></li>
+					    <li><a class="Ps_12 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps12.jpg"><span></span></a></li>
+					    <li><a class="Ps_13 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps13.jpg"><span></span></a></li>
+					    <li class="Ps_txt_03"><span></span></li>    
+			        </ul>	
+			         <ul class="PsUl_04">
+			         	<li class="Ps_txt_04"><span></span></li> 
+					    <li><a class="Ps_15 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps05.jpg"><span></span></a></li>
+					    <li><a class="Ps_16 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps06.jpg"><span></span></a></li>
+					    <li><a class="Ps_17 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps07.jpg"><span></span></a></li>
+					    <li><a class="Ps_18 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps08.jpg"><span></span></a></li>					   
+			        </ul>	   
+			        <ul class="PsUl_05">
+			       		  <li><a class="Ps_19 fancybox-thumbs" data-fancybox-group="thumb" href="images/ps_big/ps09.jpg"><span></span></a></li>
+			        </ul>   
+			</div>
+		</div>
+		<div class="footer">	
+			<p>COPYRIGHT©2014&nbsp;&nbsp;&nbsp;ZETMEI</br> 
+			ALL&nbsp;&nbsp;&nbsp;RIGHTS RESERVED</p>
+		</div>
+	</div>	
+</body>
+<script type="text/javascript">
+$(function(){
+	/*導覽列*/
+	$('.navigation>li').click(
+			function(){
+				$(this).children().addClass('opacity_yo')
+				$(this).siblings().children().removeClass('opacity_yo')
+				//alert('');
+			}	
+	)
+	$('.ct_nav li').click(
+			function(){
+				//alert('');
+				$(this).children().addClass('using_yo')
+				$(this).siblings().children().removeClass('using_yo')
+				
+			}	
+	)	
+	/*光箱樣式*/
+	$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+	});
+})
+</script>
+</html>

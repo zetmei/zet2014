@@ -1,0 +1,43 @@
+ABOUT/關於我:
+	==關於==
+	高嘉鎂/ZETMEI
+	所在位置‧台北市‧內湖區
+	//生日:03/07
+	//星座:雙魚
+	興趣‧看漫‧看書‧玩魔獸‧溜別人的狗
+	專長‧網頁設計‧PhotoShop
+	==相關經歷==
+	2014年於 資策會互動式網站UI/UX設計師就業養成班 結訓
+	//2013年肇民尾牙海報製作
+	//2014資策會專題好手平台網頁製作
+	//2014JalinKaoJewelry網頁製作
+	==技能==
+	設計軟體‧PhotoShop‧Illustrator‧InDesign‧Flash
+	網頁語言‧HTML‧CSS‧JQuery
+	涉世未深‧ActionScript‧JavaScript‧PHP
+
+
+WEB DESIGN/網頁作品
+	網頁作品:1~3+說明2行
+	單頁作品:視差捲動、時鐘、雙圖互換特效
+	CSS選單:DEMO1~10
+	CSS圖文:DEMO1~10
+
+GRAGHIC DESIGN/平面作品
+	ID作品*2+說明2行
+	PS作品*6+說明2行
+	ILLU作品*6+說明2行
+	素描作品*6
+	花藝作品*6
+
+CONTACT/聯絡我
+	台北市‧內湖區
+	0916739473
+	jameikao@hotmail.com
+
+OTHER/相關連結
+	BLOGGER
+	WORDPRESS
+	GITHUB
+
+	

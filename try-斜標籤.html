@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset(muki).css">
+<style>
+.list1{
+	position:absolute;
+	top:40%;
+	left:30%;
+	width: auto;
+	height:40px;
+	background-color: #E2E2E2;
+	padding:10px;
+	letter-spacing:-4px;
+}
+.list1 li{
+	position: relative;
+	display:inline-block;
+	width:150px;
+	height:40px;
+	/*background-color:#fff;*/
+	background-color:#fff;
+	letter-spacing:5px;
+	border:1px solid #aaa;
+	border-width:0 1px 0 0;
+
+	font-weight: 700;
+	text-shadow:0px 1px 0px #FBFBFB;
+	text-align: center;
+	line-height: 40px;
+}
+.list1 li:last-child{		
+	border-right:none;
+	}
+.list1 li::before{
+	position: absolute;
+	top: 0px;
+	left:2px;
+	content: '';
+	display: block;
+	width:0px;
+	height:2px;		
+	border: 10px solid #fff;
+	border-color:#EB8477 #EB8477 transparent #EB8477;
+}
+/*三角形小標籤變化*/
+/*
+border-color:#f00 transparent transparent transparent;小箭頭
+border-color:#f00 #f00 transparent #f00;小旗子
+border-color:#f00 transparent #f00 transparent;沙漏
+*/
+.aa::after{
+	position: absolute;
+	top: 0px;
+	left:2px;
+	content: '';
+	display: block;
+	width:0px;
+	height:10px;		
+	border: 10px solid #fff;
+	border-color:#F38B18 #F38B18 transparent #F38B18;
+	
+}
+.list1 li a{
+	display:block;
+	width:100%;
+	height:100%;	
+}
+.list1 li a:link, 
+.list1 li a:visited ,
+.list1 li a :hover ,
+.list1 li a :active {color:#4E5665;}
+
+}
+/*-----*/
+.wrapper {
+	  position: relative;
+	   z-index: 90;
+/*  top:50px;
+  right:50px;*/
+  margin: 50px auto;
+  width: 280px;
+  height: 370px;
+  background: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 8px #ccc;
+  -moz-box-shadow:    0px 0px 8px #ccc;
+  box-shadow:         0px 0px 8px #ccc;
+  border: 10px solid #fff; 
+}
+
+.ribbon-wrapper-green {
+  position: absolute;  
+  top: 30px;
+  right: 30px;
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+ /* background-color: #aaa;*/
+}
+.ribbon-green {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background-color: #BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45)); 
+  background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45); 
+  color: #6a6340;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid #6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+.ribbon-green:before {
+  left: 0;
+}
+.ribbon-green:after {
+  right: 0;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+	       <div class="ribbon-wrapper-green"><div class="ribbon-green">NEWS</div></div>
+		</div>
+	<ul class="list1"> 		
+		<li><a href="javascript:;">第一頁</a></li>
+		<li><a href="javascript:;">第二頁</a></li>
+		<li><a href="javascript:;">第三頁</a></li>
+		<li><a href="javascript:;">第四頁</a></li>
+		<li><a href="javascript:;">第五頁</a></li>
+	</ul>
+	<ul class="nav">
+		<li></li>
+	</ul>
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.list1 li').click(
+			function(){
+				$(this).addClass('aa li::after')
+				$(this).siblings().removeClass('aa li::after')
+				//alert('');
+			}	
+	)
+	// $('.ct_nav li').click(
+	// 		function(){
+	// 			//alert('');
+	// 			$(this).children().addClass('using_yo')
+	// 			$(this).siblings().children().removeClass('using_yo')
+				
+	// 		}	
+	// )
+})
+</script>
+</html>
+

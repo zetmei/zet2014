@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZETMEI</title>
+	<link rel="shortcut icon" href="images/bg/icon.png" />
+	<link rel="stylesheet" href="css/reset(muki).css">
+	<link rel="stylesheet" href="css/frameStyle.css">
+	<link rel="stylesheet" href="css/contain.css">
+	<link rel="stylesheet" href="css/contain_img.css">
+	<link href='http://fonts.googleapis.com/css?family=Michroma|Bad+Script|Play|Orbitron|Ruda|Julius+Sans+One' rel='stylesheet' type='text/css'>
+<style>
+/*-------左頁點擊頁-----*/
+.ct_nav li:nth-child(5){
+	font-weight: 700;
+	color:#fff;
+	background-color:#D98080;
+}
+.ct_nav li:nth-child(5) a{
+	color:#fff;
+}
+
+/*圖文互動*/
+.img_ul{
+	position: absolute;
+	top:105px;
+	left:105px;
+	width:auto;
+	height:200px;
+	/*background-color: #111;*/
+}
+/*---------------雙框縮放-------------------------*/
+.img_li {
+	position:relative;	
+	margin-right:20px; 
+	width: 170px;
+	height: 170px;
+	display: inline-block;
+	overflow:hidden;
+}
+.li_origin {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: block;
+	 background-size: 170px 170px;
+/*	border-radius:100%;*/
+
+	box-shadow: inset 0 0 0 15px rgba(255,255,255,0.6);
+	-webkit-transition:0.4s;
+	-moz-transition:0.4s;
+	-o-transition:0.4s;
+	-ms-transition:0.4s;
+	transition:0.4s;
+}
+.li_origin01 { 	background-image: url(images/img/m01.jpg);}
+.li_origin02 { 	background-image: url(images/img/m01.jpg);}
+.li_origin03{ 	background-image: url(images/img/m01.jpg);}
+.li_hover {
+	position: absolute;
+	width:100%;
+	height:100%;
+	display: block;
+	background-color: #3F9394;
+/*	border-radius:100%;*/
+
+	opacity: 0;	
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition:0.4s;
+	-moz-transition:0.4s;
+	-o-transition:0.4s;
+	-ms-transition:0.4s;
+	transition:0.4s;
+}
+.li_hover p {
+	color: #fff;
+	margin: 0 10px;
+	padding: 25px 0 0 0;
+	letter-spacing: 0px;
+	font-family: "OCR A Std","微軟正黑體";
+}
+.li_hover p a:link, 
+.li_hover p a:visited ,
+.li_hover p a :hover ,
+.li_hover p a :active {color: #FFFF70;}
+
+.li_origin:hover {
+	box-shadow: 
+		inset 0 0 0 1px rgba(255,255,255,0.1);
+}
+.li_origin:hover .li_hover {
+	opacity: .7;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+</style>
+</head>
+<body>
+	<div id="allBody">
+		<div class="header">
+			<div class="logo"><a href="index.html"><p>ZETMEI</p></a></div>
+			<nav class="navigation">
+				<li><a href="javascript:;">WEB</a>
+					<ul class="second_ul web_ul">
+						<li><a href="web_web.html">網頁作品</a></li>
+						<li><a href="web_page.html">單頁作品</a></li>
+						<li><a href="web_list_page01.html">CSS選單</a></li>
+						<li><a href="web_img_page01.html">CSS圖文</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">GRAGHIC</a>
+					<ul class="second_ul graphic_ul">
+						<li><a href="graphic_id.html">ID作品</a></li>
+						<li><a href="graphic_ps.html">PS作品</a></li>
+						<li><a href="graphic_illu.html">ILLU作品</a></li>
+						<li><a href="graphic_sketch.html">素描作品</a></li>
+					</ul>
+				</li>
+				<li><a href="ABOUT.html">ABOUT.html</a></li>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="cont_left">
+				<p>css圖文</p>
+				<ul class="ct_nav">
+					<li><a href="web_img_page01.html">SAMPLE01</a></li>
+					<li><a href="web_img_page02.html">SAMPLE02</a></li>
+					<li><a href="web_img_page03.html">SAMPLE03</a></li>
+					<li><a href="web_img_page04.html">SAMPLE04</a></li>
+					<li><a href="web_img_page05.html">SAMPLE05</a></li>
+					<li><a href="web_img_page06.html">SAMPLE06</a></li>
+					<li><a href="web_img_page07.html">SAMPLE07</a></li>
+					<li><a href="web_img_page08.html">SAMPLE08</a></li>
+					<li><a href="web_img_page09.html">SAMPLE09</a></li>
+					<li><a href="web_img_page10.html">SAMPLE10</a></li>
+				</ul>
+			</div>				
+<div class="cont_right">
+				<h3>+持續更新中...</h3>
+				<p>&nbsp; 持續更新中...</p>
+				<ul class="img_ul">
+					<li class="img_li">
+						<span class="li_origin li_origin01">
+							<span class="li_hover">
+								<p>bibichuchu</br>
+								cat</br>
+								<a href="index.html">by ZETMEI</a></p>
+							</span>
+						</span>
+					</li>
+					<li class="img_li">
+						<span class="li_origin li_origin02">
+							<span class="li_hover">
+								<p>bibichuchu</br>
+								cat</br>
+								<a href="index.html">by ZETMEI</a></p>
+							</span>
+						</span>
+					</li>
+					<li class="img_li">
+						<span class="li_origin li_origin03">
+							<span class="li_hover">
+								<p>bibichuchu</br>
+								cat</br>
+								<a href="index.html">by ZETMEI</a></p>
+								
+							</span>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">	
+			<p>COPYRIGHT©2014&nbsp;&nbsp;&nbsp;ZETMEI</br> 
+			ALL&nbsp;&nbsp;&nbsp;RIGHTS RESERVED</p>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.navigation>li').click(
+			function(){
+				$(this).children().addClass('opacity_yo')
+				$(this).siblings().children().removeClass('opacity_yo')
+				//alert('');
+			}	
+	)
+	$('.ct_nav li').click(
+			function(){
+				//alert('');
+				$(this).children().addClass('using_yo')
+				$(this).siblings().children().removeClass('using_yo')
+				
+			}	
+	)
+})
+</script>
+</html>

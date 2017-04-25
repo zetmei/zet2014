@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+*{margin:0;padding:0;}
+
+.list7{
+	position:relative;
+	height:128px;
+	width:auto;
+	text-align:center;
+	}
+	
+.list7 li{
+	position:relative;
+	z-index:1;
+	display:inline-block;
+	height:128px;
+	width:128px;
+	background-color:rgba(255,0,0,.5);	
+	}
+.list7 li:last-child{
+	position:absolute;		/*訂正*/
+	left:0;
+	top:0;
+	z-index:-1;
+	/*background:transparent;*/
+	width:100%;				/*爸爸是list7*/
+	}
+
+/*---------------------放大------------------*/
+.list7 li:nth-child(1):hover ~ li:last-child img:nth-child(1){height:160px;,width:auto;}
+
+.list7 li:nth-child(2):hover ~ li:nth-child(6) img:nth-child(2){height:160px;,width:auto;}
+
+.list7 li:nth-child(3):hover ~ li:nth-child(6) img:nth-child(3){height:160px;,width:auto;}
+
+.list7 li:nth-child(4):hover ~ li:nth-child(6) img:nth-child(4){height:160px;,width:auto;}
+
+.list7 li:nth-child(5):hover ~ li:nth-child(6) img:nth-child(5){height:160px;,width:auto;}
+
+/*------------------隔壁的也放大----------------*/
+
+.list7 li:nth-child(1):hover ~ li:last-child img:nth-child(2),
+.list7 li:nth-child(5):hover ~ li:last-child img:nth-child(4){height:145px;,width:auto;}
+
+.list7 li:nth-child(2):hover ~ li:nth-child(6) img:nth-child(1) ,
+.list7 li:nth-child(2):hover ~ li:nth-child(6) img:nth-child(3){height:145px;,width:auto;}
+
+.list7 li:nth-child(3):hover ~ li:nth-child(6) img:nth-child(2) ,
+.list7 li:nth-child(3):hover ~ li:nth-child(6) img:nth-child(4){height:145px;,width:auto;}
+
+.list7 li:nth-child(4):hover ~ li:nth-child(6) img:nth-child(3) ,
+.list7 li:nth-child(4):hover ~ li:nth-child(6) img:nth-child(5){height:145px;,width:auto;}
+/*------------------修正----------------*/
+.list7 li{
+	transition:.5s;
+}
+.list7 li:nth-child(6) img{/*transition來回都有效*/
+	height:128px;
+	transition:height .5s;
+	}
+.list7 li:hover{				/*hover訂正*/
+	height:160px;
+	width:160px;
+	}
+</style>
+</head>
+
+<body>
+	<ul class="list7">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li>
+			<img src="images/01.png">
+		    <img src="images/02.png">
+		    <img src="images/03.png">
+		    <img src="images/04.png">
+		    <img src="images/05.png">
+
+		</li>
+	</ul>
+</body>
+</html>

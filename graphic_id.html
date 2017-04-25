@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZETMEI</title>
+	<link rel="shortcut icon" href="images/bg/icon.png" />
+	<link rel="stylesheet" href="css/reset(muki).css">
+	<link rel="stylesheet" href="css/frameStyle.css">
+	<link rel="stylesheet" href="css/contain.css">
+	<link href='http://fonts.googleapis.com/css?family=Michroma|Bad+Script|Play|Orbitron|Ruda|Julius+Sans+One' rel='stylesheet' type='text/css'>
+<style>
+.cont_right{
+	display: inline-block;
+	position: absolute;
+	top:20px;
+	left:20px;
+	width:1000px;
+	height:410px;
+	background-color:#fff;
+}
+.footer{	
+	position:absolute;
+	top:350px;/*頁尾高度*/
+	left:-20px;
+	width:1024px;
+	height:50px;
+	background-color:#fff;	
+	padding:10px; 
+	border-top:1px solid #000;
+}
+/*----*/
+.cr_in{
+		position: absolute;
+		top: 20px;
+		left:80px;
+		width: 950px;
+		height: 400px; 
+		/*border-top: 1px solid rgba(0,0,0,.2);*/
+		padding: 10px 0;	
+		/*background-color: #f00;	*/
+	}
+.cr_in h3{
+		position: absolute;
+		top:-15px;
+		left:0px;
+		font-size: 16px;
+		font-family: "OCR A Std","微軟正黑體";
+		color: #4d4d4d;
+		height: 20px;
+		line-height: 20px;
+		padding:0 10px;
+		border-right: 1px solid rgba(0,0,0,.2);
+	}
+/*內容排版*/
+.book_01{
+	position: relative;
+	top:20px;
+	left:0px;
+	width: 880px;
+	height: 270px;
+	background-color: #fff;
+	border: 3px double #111;
+	border-radius: 30px;
+}
+.book_01 img{
+	position: absolute;	
+	top:30px;
+	left:80px;
+	width:150px;
+	height: auto;
+}
+
+.book_01 p{	
+	position: absolute;
+	top:35px;
+	left:330px;
+	font-family: "OCR A Std","微軟正黑體";
+	font-weight: 16px;
+	line-height: 20px;
+}
+/*連結*/
+.cube_aa{
+		position: absolute;
+		top:220px;
+		left:650px;		
+		display: block;
+		width: 150px;
+		height:30px;
+		line-height: 30px;
+		text-align: center;		
+}
+.cube_aa a{
+		display: block;
+		width: 150px;
+		height:30px;
+		color:#ccc;
+		background-color:#344765;
+		font-family: "OCR A Std","微軟正黑體";
+}
+.cube_aa_01 a{background-color:#422E1E}
+/*往後新增電子書用*/
+/*.cube_aa_02 a{background-color:#991100;}
+.cube_aa_03 a{background-color:#333;}*/
+</style>
+</head>
+<body>
+	<div id="allBody">
+		<div class="header">
+			<div class="logo"><a href="index.html"><p>ZETMEI</p></a></div>
+					<nav class="navigation">
+				<li><a href="javascript:;">WEB</a>
+					<ul class="second_ul web_ul">
+						<li><a href="web_web.html">網頁作品</a></li>
+						<li><a href="web_page.html">單頁作品</a></li>
+						<li><a href="web_list_page01.html">CSS選單</a></li>
+						<li><a href="web_img_page01.html">CSS圖文</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">GRAGHIC</a>
+					<ul class="second_ul graphic_ul">
+						<li><a href="graphic_id.html">ID作品</a></li>
+						<li><a href="graphic_ps.html">PS作品</a></li>
+						<li><a href="graphic_illu.html">ILLU作品</a></li>
+						<li><a href="graphic_sketch.html">素描作品</a></li>
+					</ul>
+				</li>
+				<li><a href="ABOUT.html">ABOUT.html</a></li>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="cont_left"></div>				
+			<div class="cont_right">
+				<div class="cr_in"><h3>2014 InDesign作品</h3>
+					<div class="book_01">
+						<img src="images/id/book01.jpg" />
+						<p><strong>書名：魔獸世界</strong></br>
+							資料來源：Blizzard Entertainment</br>
+							製作者：高嘉鎂</br>
+							資料來源：http://tw.battle.net/wow/zh/?-</br>
+							作業系統：Android/Windows Vista以上作業系統</br>
+							播放軟體：Flash Player9.0 or Above/Browser</br>
+							檔案格式：SWF</br>
+							</br>
+							※非營利性活動中合理使用著作</p>
+						<div class="cube_aa cube_aa_01"><a href="images/id/idbook01.swf">查看電子書</a></div>
+					</div>
+				</div>				
+		<div class="footer">	
+			<p>COPYRIGHT©2014&nbsp;&nbsp;&nbsp;ZETMEI</br> 
+			ALL&nbsp;&nbsp;&nbsp;RIGHTS RESERVED</p>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.navigation>li').click(
+			function(){
+				$(this).children().addClass('opacity_yo')
+				$(this).siblings().children().removeClass('opacity_yo')
+				//alert('');
+			}	
+	)
+	$('.ct_nav li').click(
+			function(){
+				//alert('');
+				$(this).children().addClass('using_yo')
+				$(this).siblings().children().removeClass('using_yo')
+				
+			}	
+	)
+})
+</script>
+</html>

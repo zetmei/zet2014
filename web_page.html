@@ -1,0 +1,289 @@
+<!-- 我的資料庫^^
+top button、四方偵測、雙圖互拉、香蕉咖啡的兩個外掛、圖片細部查看外掛 -->
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZETMEI</title>
+	<link rel="shortcut icon" href="images/bg/icon.png" />
+	<link rel="stylesheet" href="css/reset(muki).css">
+	<link rel="stylesheet" href="css/frameStyle.css">
+	<link rel="stylesheet" href="css/contain.css">
+	<link href='http://fonts.googleapis.com/css?family=Michroma|Bad+Script|Play|Orbitron|Ruda|Julius+Sans+One' rel='stylesheet' type='text/css'>
+<style>
+.cont_right{
+	display: inline-block;
+	position: absolute;
+	top:20px;
+	left:20px;
+	width:1000px;
+	height:410px;
+	background-color:#fff;
+}
+.cont_right_02{
+	left:500px;
+	/*background-color:#f00;*/
+}
+/*----*/
+.cr_in{
+		position: absolute;
+		top: 20px;
+		left:30px;
+		width: 950px;
+		height: 450px; 
+		/*border-top: 1px solid rgba(0,0,0,.2);*/
+		padding: 10px 0;	
+		/*background-color: #f00;	*/
+	}
+.cr_in h3{
+		position: absolute;
+		top:-15px;
+		left:0px;
+		font-size: 16px;
+		font-family: "OCR A Std","微軟正黑體";
+		color: #4d4d4d;
+		height: 20px;
+		line-height: 20px;
+		padding:0 10px;
+		border-right: 1px solid rgba(0,0,0,.2);
+	}
+.cube{
+		position: relative;
+		width: 380px;
+		height:95px;
+		margin: 20px 0;
+		-webkit-transform-style: preserve-3d;
+		-webkit-transition: .5s ;			
+	}
+.cube>div{
+		position: absolute;
+		width: 380px;
+		height:95px;
+		cursor: pointer;				
+	}	
+.cube_img {
+		/*轉上去高度*/
+		-webkit-transform: translateZ(50px); 		
+		background: transparent;
+		overflow: hidden;
+		transition: opacity .7s;
+	}
+.cube_img img{
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 190px;
+	}	
+.cube_img:after{
+		content: '';
+		position: absolute;
+		width: 380px;
+		height:95px;
+		opacity: 0;
+		transition: opacity .7s;
+	}
+#cube_01:after{
+		background: url(images/page/page1.jpg) 0px -95px no-repeat;		
+	}
+#cube_02:after{
+		background: url(images/page/page_02.jpg) 0px -95px no-repeat;		
+	}
+#cube_03:after{
+		background: url(images/page/page_99.jpg) 0px -95px no-repeat;		
+	}
+#cube_04:after{
+		background: url(images/page/page_99.jpg) 0px -95px no-repeat;		
+	}
+#cube_05:after{
+		background: url(images/page/page_99.jpg) 0px -95px no-repeat;		
+	}
+#cube_06:after{
+		background: url(images/page/page_99.jpg) 0px -95px no-repeat;		
+	}
+.cube .cube_txt{		
+		-webkit-transform: rotateX(-90deg) translateZ(100px);       
+		background: #d4cbbb;
+		display: block;
+		border-radius: 10px;
+		color: #5d5d5d;
+	}		
+.cube_img:hover:after{
+		opacity: 1;
+	}
+.cube_txt h4{
+		margin: 10px 20px 10px 20px;		
+		font-size: 14pt;
+		line-height: 20px;
+		font-family: "OCR A Std","微軟正黑體";
+	}
+.cube_txt p{
+		margin:5px 20px;		
+		font-size: 10pt;
+		line-height: 16px;
+		font-family: "OCR A Std","微軟正黑體";
+	}
+	/*前往連結*/
+.cube_aa{
+		position:absolute;	
+		display: block;
+		width: 30px;
+		height:30px;
+		line-height: 30px;
+		text-align: center;			
+}
+.gogo01{	top:95px;	left:385px;}
+.gogo02{	top:210px;	left:385px;}
+.gogo03{	top:325px;	left:385px;}
+.gogo04{	top:95px;	left:385px;}
+.gogo05{	top:210px;	left:385px;}
+.gogo06{	top:325px;	left:385px;}
+.cube_aa a{
+		display: block;
+		width: 30px;
+		height:30px;
+		color:#ccc;
+		border-radius: 50%;
+		background-color:#848484;
+		font-family: "OCR A Std","微軟正黑體";
+}
+.cube_aa a:hover{
+		background-color:#333;
+}
+</style>
+</head>
+<body>
+	<div id="allBody">
+		<div class="header">
+			<div class="logo"><a href="index.html"><p>ZETMEI</p></a></div>
+			<nav class="navigation">
+				<li><a href="javascript:;">WEB</a>
+					<ul class="second_ul web_ul">
+						<li><a href="web_web.html">網頁作品</a></li>
+						<li><a href="web_page.html">單頁作品</a></li>
+						<li><a href="web_list_page01.html">CSS選單</a></li>
+						<li><a href="web_img_page01.html">CSS圖文</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">GRAGHIC</a>
+					<ul class="second_ul graphic_ul">
+						<li><a href="graphic_id.html">ID作品</a></li>
+						<li><a href="graphic_ps.html">PS作品</a></li>
+						<li><a href="graphic_illu.html">ILLU作品</a></li>
+						<li><a href="graphic_sketch.html">素描作品</a></li>
+					</ul>
+				</li>
+				<li><a href="ABOUT.html">ABOUT.html</a></li>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="cont_left"></div>				
+			<div class="cont_right">
+				<div class="cr_in"><h3>2014 前端作品</h3>
+					<div class="cube">
+						<div class="cube_img" id="cube_01"><img src="images/page/page_01.jpg"></div>
+						<div class="cube_txt">
+							<h4>時鐘 Clock</h4>
+							<p>使用Javascript校對時間</p>	
+							<p>配合時鐘造型</p>								
+						</div>
+					</div>
+					<div class="cube_aa gogo01"><a href="page_clock/clock.html">go</a></div>	
+					<div class="cube">
+						<div class="cube_img" id="cube_02"><img src="images/page/page_02.jpg"></div>
+						<div class="cube_txt">
+							<h4>幻燈片 Slider bar</h4>
+							<p>使用jQuery寫出換燈片</p>
+							<p>無接縫設計</p>
+						</div>
+					</div>
+					<div class="cube_aa gogo02"><a href="page_sliderbar/sliderbar.html">go</a></div>
+					<div class="cube">
+						<div class="cube_img" id="cube_03"><img src="images/page/page_99.jpg"></div>
+						<div class="cube_txt">
+							<h4>尚未更新</h4>
+							<p>持續更新中</p>
+							<p>持續更新中</p>
+						</div>
+					</div>	
+					<div class="cube_aa gogo03"><a href="javascript:;">go</a></div>	
+        		</div>
+			</div>
+<!-- 右邊排版 -->
+			<div class="cont_right cont_right_02">
+				<div class="cr_in">
+					<div class="cube">
+						<div class="cube_img" id="cube_04"><img src="images/page/page_99.jpg"></div>
+						<div class="cube_txt">
+							<h4>尚未更新</h4>
+							<p>持續更新中</p>
+							<p>持續更新中</p> 										
+						</div>
+					</div>
+					<div class="cube_aa gogo04"><a href="javascript:;">go</a></div>
+					<div class="cube">
+						<div class="cube_img" id="cube_05"><img src="images/page/page_99.jpg"></div>
+						<div class="cube_txt">
+							<h4>尚未更新</h4>
+							<p>持續更新中</p>
+							<p>持續更新中</p>
+						</div>
+					</div>
+					<div class="cube_aa gogo05"><a href="javascript:;">go</a></div>
+					<div class="cube">
+						<div class="cube_img" id="cube_06"><img src="images/page/page_99.jpg"></div>
+						<div class="cube_txt">
+							<h4>尚未更新</h4>
+							<p>持續更新中</p>
+							<p>持續更新中</p>
+						</div>
+					</div>	
+					<div class="cube_aa gogo06"><a href="javascript:;">go</a></div>
+        		</div>
+			</div>
+		</div>
+		<div class="footer">	
+			<p>COPYRIGHT©2014&nbsp;&nbsp;&nbsp;ZETMEI</br> 
+			ALL&nbsp;&nbsp;&nbsp;RIGHTS RESERVED</p>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.navigation>li').click(
+			function(){
+				$(this).children().addClass('opacity_yo')
+				$(this).siblings().children().removeClass('opacity_yo')
+				//alert('');
+			}	
+	)
+	$('.ct_nav li').click(
+			function(){
+				//alert('');
+				$(this).children().addClass('using_yo')
+				$(this).siblings().children().removeClass('using_yo')
+				
+			}	
+	)
+})
+//內頁展示
+$(function(){	
+	$('.cube_img').click(cube_r);
+	$('.cube_txt').click(cube_r);	
+
+    function cube_r(aa){
+    	var current=$(this).prop("id");
+    	var cla= $(this).prop("class");    	
+    	if (cla=='cube_img'){
+    		$('#'+current).parent().css({"-webkit-transform": "rotateX(89deg)"})
+    		$(this).css("opacity",.1);
+    	}
+    	else{
+    		$(this).parent().css({"-webkit-transform": "rotateX(0deg)"})
+    		$(this).siblings('.cube_img').css("opacity",1);
+    	}    	
+    }
+ });
+</script>
+</html>

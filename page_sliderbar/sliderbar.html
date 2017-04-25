@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+*{margin:0;padding:0;}
+.slider{
+	width:500px;
+	height:500px;
+	margin:auto;
+	position:relative;
+	overflow:hidden;
+	}
+.sc{
+	position:relative;
+	left:0;}
+
+.sc li{
+	float:left;
+	list-style-type:none;}
+	
+.sb{
+	width:100%;
+	position:absolute;
+	bottom:0px;
+	text-align:center;
+	}
+.sb li{
+	display:inline-block;
+	width:20px;
+	height:5px;
+	margin:5px;
+	background:#FFF;
+	list-style-type:none;
+	}
+.sb .active{
+	background:#FF3;
+	}
+</style>
+</head>
+<body>
+<div class="slider">
+	<ul class="sc">
+   		<li><img src="images/slider01.jpg" width="500" height="500"></li> 
+        <li><img src="images/slider02.jpg" width="500" height="500"></li> 
+        <li><img src="images/slider03.jpg" width="500" height="500"></li> 
+        <li><img src="images/slider04.jpg" width="500" height="500"></li> 
+    </ul>
+</div>
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script>
+$(function(){
+			var sc = $('.sc li').length;				//定義圖片的數目
+			//alert(sc);
+			var liwidth = $('.sc li').width();			//定義圖片總寬
+			$('.sc').css({width:liwidth*(sc+1)});		//=總li長度的ul,第五張+1
+			$('.slider').append('<ul class="sb"></ul>');//無中生有ul
+			for(i = 0; i<sc; i++){						//無中生有控制調
+					//alert(i);
+					$('.sb').append('<li></li>');
+			};
+			
+			/*-------------幻燈片開始跑------------*/
+			var liIndex = 0;								//設定一個變數當索引值
+			$('.sb li').first().addClass('active');		//套上作用中的class
+			$('.sb li').click(
+					function(){
+							liIndex=$(this).index();//被選到的第幾個
+							//alert(liIndex);
+							$('.sc').stop().animate({left:-liIndex*liwidth},500);
+							$(this).addClass('active').siblings('li').removeClass('active');//控制調轉換class
+					}
+			);
+			/*------------複製第一章成第五l,前面總長要改第五張+1張------*/
+			$('.sc').append(
+					$('.sc li').first().clone()
+			);
+
+			/*----------幻燈片自動跑--------------*/
+			var sdplay = setInterval( sdgo , 2000 );			// 計時器計時2秒
+			function sdgo(){
+				//alert('go');
+				$('.sc').stop().animate({left: -liIndex * liwidth },500);
+				$('.sb li').eq(liIndex).addClass('active').siblings('li').removeClass('active');
+			
+				if( liIndex < sc ){
+					liIndex++;
+				}else{
+					$('.sc').stop().animate({left:-liIndex*liwidth},500).animate({left:0},0);
+					liIndex=1;
+					$('.sb li').eq(0).addClass('active').siblings('li').removeClass('active');
+				}	
+	}		
+})
+
+/*if( liIndex < sliderCount-1 )
+{   //如果目前的liIndex小於幻燈片的數量減一(也就是說，目前幻燈片波還沒撥放到最後一張的話)，把liIndex加1
+liIndex++;
+}else{  
+//表示幻燈片撥放到最後一張了，所以把liIndex歸零
+liIndex=0;
+*/
+
+
+
+</script>
+</html>

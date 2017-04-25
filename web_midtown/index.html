@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Midtown House</title>
+<link rel="stylesheet" href="css/reset(muki).css">
+<script src="js/jquery-1.10.2.min.js"></script></script>
+<link href="01-style.css" rel="stylesheet" type="text/css">
+<style>
+/*網頁初始設定*/
+*{ font-family:'Impact','微軟正黑體';}
+body:{height:100%;}
+a:link {    color: #666;}
+a:visited, a:active {    color: #000;}
+
+/*header排版*/
+#header_out {
+    position:fixed;
+    width:100%;
+    height:80px;
+    z-index:100;
+    background:#252525;
+}
+#header_in {
+    position:relative;  
+    width:1280px;
+    height:80px;
+    margin:0 auto;
+    }
+#header_in	#logo a{ 
+	float:left; 
+	margin:5px 0 0 20px; 
+	width:60px; 
+	height:80px; 
+	background:url(images/LOGO-big1.png) 0 0 no-repeat;
+	}
+#header_in	#menu_ul{
+    float:right; 
+    margin:0px 10px; 
+    display:inline-block; 
+}
+#header_in	#menu_ul li{
+    display:inline-block; 
+    margin:0 10px;
+}
+#menu_ul li a{   
+    color:#DCD8CC;
+    font-size:20px;
+    line-height:80px; 
+    transition:.3s; 
+    }
+#menu_ul li a:hover{
+    color:#A59274;
+    }
+/*----內頁面排版-------*/
+.section{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    display: block;
+    overflow: hidden;
+    text-align:center;
+}
+/*頁面設定*/
+#section01 {background: none repeat fixed 0 0 rgba(235,165,165,1);}
+#section01 h1{text-align:center;margin:120px auto;}
+#section02 {background: none repeat fixed 0 0 rgba(218,88,88,1);}
+#section02 h1{text-align:center;margin:120px auto;}
+#section03 {background: none repeat fixed 0 0 rgba(179,40,40,1);}
+#section03 h1{text-align:center;margin:120px auto;}
+#section04 {background: none repeat fixed 0 0 rgba(107,24,24,1);}
+#section04 h1{text-align:center;margin:120px auto;}
+#section05 {background: none repeat fixed 0 0 rgba(60,13,13,1);}
+#section05 h1{text-align:center;margin:120px auto;}
+#section06 {background: none repeat fixed 0 0 rgba(0,0,0,1);}
+#section06 h1{text-align:center;margin:120px auto;}
+/*內頁背景顏色*/
+#section01{
+    background:url(images/imdex_01.jpg) 0 0 no-repeat;/*
+    background-image:url(images/imdex_01.jpg);
+    background-repeat:no-repeat;*/
+    background-size:100% 780px;/*
+    background-position:0 0px;*/
+    position:relative;
+    }
+.indexpic{
+    position:absolute;
+    top:32%;
+    left:40%;
+    }
+#section02{background:#706551;}
+#section03{background:#A59274;}
+#section04{background:#706551;}
+#section05{background:#A59274;}
+#section06{background:#252525;}
+/*----內頁面排版-------*/
+.page_both{ /*全頁置中用*/
+    position:relative; 
+    margin:0px auto; 
+    width:1280px;
+    height:620px;
+    /*background:#f00;*/
+}
+.page_both h1{
+    position:absolute; 
+    top:100px;
+    left:80px;
+    width:200px;
+    height: 80px; 
+    color:#DCD8CC;
+    font-size:30px;
+    line-height: 30px;
+    /*background-color: #000;*/
+}
+.page_both .page_right{ 
+    position:relative; 
+    top:85px; 
+    right:20px;
+    width:950px;
+    height:520px;    
+    float:right;
+    text-align:center;
+    border-top:3px double #252525;
+    border-bottom:3px double #252525;
+   /* background:#999;*/
+    }  
+/*about頁面*/
+.page_right .about1{
+    position:relative;
+    top:30px;
+    width:400px;
+    height:450px;
+    margin-right: 10px;
+    display:inline-block;
+    background:#252525;
+    border-radius:50px 0 50px 50px ;
+    overflow:hidden;    
+    }
+.page_right .about1 h6{
+    color:#A59274;
+    font-size:26px;
+    font-family: "微軟正黑體";
+    margin:30px auto 30px auto;
+    }
+.page_right .about1 p{
+    color:#DCD8CC;
+    font-size:16px;
+    font-family: "微軟正黑體";
+    margin:30px 50px 0 50px;
+    line-height:30px;
+    }
+/*service頁面*/ 
+.pic_opac1{
+    position:relative;
+    top:30px;
+    width:260px;
+    height:400px;
+    display:inline-block;
+    }
+.pic_opac1::after{
+    content:'點圖看更多';
+    width:100%;
+    height:20%;
+    position:absolute;
+    top:100%;
+    left:0;
+    /*background-color:#FFF;*/
+    font-size:16px;
+    color:#252525;
+    }
+.pic_hover{
+    position:absolute;
+    top:0;
+    left:0;
+    width:260px;
+    height:400px;
+    vertical-align:50%; 
+    background:#000;
+    opacity:0;
+    transition:.1s;
+    }
+.pic_hover p.read{
+    position:absolute;
+    top:40%;
+    left:38%;
+    font-size:30px;
+    line-height: 30px;
+    color:#FFF;
+    font-family:'Impact';
+    }
+.pic_hover:hover{
+    opacity:.75;
+    }
+ /*attractions頁面*/
+#section04 .page_right ul{
+    margin-top: 10px;
+ }
+#section04 .page_right ul li{/*格子*/
+    display:inline-block;
+    width:230px;
+    height:230px;
+    margin: 2px;
+    overflow:hidden;
+    text-align:left;
+    background:url(images/bg-01.png);
+    
+    }
+.att01{/*標題*/
+    color:#A59274;
+    font-size:40px;
+    font-family: "Constantia";
+    line-height:35px;
+    text-align:left;
+    }
+.att02{/*內文*/
+    color:#DCD8CC;
+    font-size:16px;
+    font-family: "微軟正黑體";
+    overflow:hidden;
+    line-height:20px;
+    text-align:left;
+    }
+/*traffic頁面*/
+#section05 .page_right #map{
+    display:inline-block;
+    width:300px;
+    height:340px;
+    position:absolute;
+    right:500px;
+    top:50px;   
+    box-shadow:8px 8px 10px 0px #333;
+    }
+#section05 .page_right #map02{
+    display:inline-block;
+    width:260px;
+    height:300px;
+    padding:20px;
+    background:#252525;
+    position:absolute;
+    right:120px;
+    top:50px;
+    text-align:left;
+    box-shadow:8px 8px 10px 0px #333;
+    }
+#section05 .page_right #map02 h2{
+    font-size:25px;
+    color:#A59274;
+    line-height:35px;
+    text-align:left;
+    }
+#section05 .page_right #map02 p{
+    color:#fff;
+    font-size:16px;
+    line-height: 20px;
+    }
+/*contact頁面*/
+.contact_ul{
+    position:absolute;
+    top:120px;
+    right:100px;
+    /*background:#06C;*/
+    }
+.contact_ul div{
+    display:inline-block;
+    width:300px;
+    height:100px;
+    margin:3px;
+    border-radius:15px;
+    text-align:center;
+    border:solid 5px #DCD8CC;
+    letter-spacing:2px;
+}
+.contact1{
+    background:#252525;
+    overflow:hidden;
+    }
+.contact2{
+    box-shadow:0px 0px 10px 0px #fff;
+    overflow:hidden;
+    transition:1s;
+    }
+.contact1 p{
+    position:relative;
+    top:30px;
+    left:0%; 
+    font-size:16px;
+    color:#DCD8CC;   
+    }
+.contact2 p.booking1{
+    font-size:28px;
+    color:#DCD8CC;
+    font-family: "微軟正黑體";
+    position:relative;
+    top:28px;
+    left:0%;
+    }
+.contact2 p.booking2{
+    font-size:15px;
+    color:#DCD8CC;
+    font-family: 'Niconne', cursive;
+    position:relative;
+    top:28px;
+    left:0%;
+    }
+.contact2:hover{
+    box-shadow:0px 0px 20px 0px #fff;
+    }
+.contact2 a{
+    /*display:block;*/
+    width:300px;
+    height:100px;
+    color:#DCD8CC;
+    text-decoration:none;
+    }
+.contact2:hover .contact2 p.booking1{
+    color:#A59274;
+    }
+
+/*頁尾設定*/
+#footer{background:#fff; height:50px; text-align:center; padding:20px 0 0;}
+</style>
+</head>
+<body>
+ <div id="header_out">
+	 <div id="header_in">
+	 	 <div id="logo"><a href="javascript:;" onclick="$('#section01').animatescroll();"></a></div>
+	    	<ul id="menu_ul">
+	        	<li><a href="javascript:;" onclick="$('#section02').animatescroll();">ABOUT</a></li>
+	            <li><a href="javascript:;" onclick="$('#section03').animatescroll();">SERVICE</a></li>
+	            <li><a href="javascript:;" onclick="$('#section04').animatescroll();">ATTRACTIONS</a></li>
+				<li><a href="javascript:;" onclick="$('#section05').animatescroll();">TRAFFIC</a></li>
+                <li><a href="javascript:;" onclick="$('#section06').animatescroll();">CONTACT</a></li>
+			</ul>    
+	 </div>
+ </div>
+ 
+ <div class="section" id="section01">
+    <img class="indexpic" src="images/indexpic/index_pic03.png" width="460" height="100">
+ </div>
+ 
+ <div class="section" id="section02">
+    <div class="page_both">
+        <h1>ABOUT<br>新東京宅</h1>    
+        <div class="page_right">
+                <div class="about1"> 
+                    <h6>關於</h6>
+                    <p>新東京宅，位於台北市中心，南京東路上，風格高雅，舒適，提供專業服務式公寓的商務住宅。身處便捷的松江南京捷運站，距離火車站2站，松山機場3站，位於商業、金融、娛樂區的精華地段。附近公園與商圈豐富，生活機能充足，公車搭配捷運四通八達，通行無阻。 </p>
+                </div>
+                <div class="about1"> 
+                    <h6>旅店</h6>
+                    <p>夜晚，當你回到新東京宅會館大樓，可待在陽台遠眺台北市街景，欣賞台北的夜景，或聽音樂，或啜飲一杯，或懶懶的放空。享受寧靜舒適的空間，請好好休息。 </p>
+                </div>    
+        </div>
+    </div>
+ </div>
+ 
+ <div class="section" id="section03">
+    <div class="page_both">
+        <h1>SERVICE<br>服務項目</h1>
+        <div class="page_right">
+            <div class="pic_opac1">
+                <a href="page02.html">
+                <div class="pic_pic"><img src="images/middle/middle_03.jpg" width="260" height="400"></div>
+                <div class="pic_hover"><div><p class="read">READ<br>MORE</p></div></div>
+                </a>
+            </div>
+            <div class="pic_opac1">
+                <a href="page02.html">
+                <div class="pic_pic"><img src="images/middle/middle_01.jpg" width="260" height="400"></div>
+                <div class="pic_hover"><p class="read">READ<br>MORE</p></div>
+                </a>
+            </div>
+            <div class="pic_opac1">
+                <a href="page03.html">
+                <div class="pic_pic"><img src="images/middle/middle_02.jpg" width="260" height="400"></div>
+                <div class="pic_hover"><p class="read">READ<br>MORE</p></div>
+                </a>
+            </div>
+        </div>
+    </div>
+ </div>
+ 
+<div class="section" id="section04">
+    <div class="page_both">
+        <h1>ATTRACTIONS<br>周邊景點</h1>
+        <div class="page_right">
+            <ul>
+                <li><h2 class="att01">1/</h2><br>
+                <span class="att02">周邊商圈>>走路5分鐘<br>
+                                    四平商圈、伊通公園、錢櫃陶板屋、舒果義式蔬食、聚、出一張嘴等數不清的餐廳</span></li>
+                <li><h2 class="att01">2/</h2><br>
+                    <span class="att02">捷運忠孝新生站>>5分鐘<br>光華商場、華山藝文中心</span></li>
+                <li><h2 class="att01">3/</h2><br>
+                    <span class="att02">捷運忠孝復興站>>5分鐘<br>SOGO百貨、誠品敦南店、鼎泰豐、杏子豬排、祥發茶餐廳、數不清的餐廳 逛不完的店家</span></li>
+                <li><h2 class="att01">4/</h2><br>
+                    <span class="att02">台北車站>>10分鐘<br>台北轉運站(京站)、北車美食圈SOGO百貨、相機街</span></li>
+                <li><h2 class="att01">5/</h2><br>
+                     <span class="att02">公車10分鐘至台北車站、寧夏夜市、行天宮</span></li>
+                <li><h2 class="att01">6/</h2><br>
+                    <span class="att02">捷運忠孝復興站>>5分鐘<br>SOGO百貨、誠品敦南店、鼎泰豐、杏子豬排、祥發茶餐廳、數不清的餐廳 逛不完的店家</span></li>
+                <li><h2 class="att01">7/</h2><br>
+                     <span class="att02">捷運忠孝復興站>>5分鐘<br>SOGO百貨、誠品敦南店、鼎泰豐、杏子豬排、祥發茶餐廳、數不清的餐廳 逛不完的店家</span></li>
+                <li><h2 class="att01">8/</h2><br>
+                    <span class="att02">捷運忠孝復興站>>5分鐘<br>SOGO百貨、誠品敦南店、鼎泰豐、杏子豬排、祥發茶餐廳、數不清的餐廳 逛不完的店家</span></li>
+            </ul>
+        </div>
+    </div>
+ </div>
+ 
+ <div class="section" id="section05">
+    <div class="page_both">
+        <h1>TRAFFIC<br>交通位置</h1>
+        <div class="page_right">
+            <div id="map"></div>
+            <div id="map02">
+                <h2>1/位置</h2>
+                <p class="map_txt">
+                台北市南京東路與松江路交會口</br>
+                 台北市中山區南京東路二段108號</br>
+                </p>
+                <h2>2/交通工具</h2>
+                <p class="map_txt">
+                捷運-蘆洲中和線 松江南京站(未來捷運蘆洲線未來松山線轉運站)</br>
+                公車-604、307、49、652、5、527 約20分鐘</br>
+                火車-至台北車站轉捷運板南線，於忠孝新生轉捷運蘆洲線至松江南京站 約10分鐘</br>
+                機場-松山機場搭捷運中山站至南京東路，轉松山線至松江南京站
+               </p>
+            </div>
+        </div>
+    </div>
+ </div>
+     
+ <div class="section" id="section06">
+    <div class="page_both">
+        <h1>CONTACT<br>聯絡我們</h1>
+        <div class="page_right">
+            <div class="contact_ul">                          
+                            <div class="contact1">
+                                <p>新東京宅會館<br>
+                                   地址：台北市南京東路2段108號</p>
+                            </div>
+                            <div class="contact1">
+                                <p>預約位訂:0900-000-000<br>
+                                   聯絡電話：02-0000-0000</p>
+                            </div>
+                              <div class="contact1">
+                                <p>FACEBOOK:新東京宅酒店式公寓
+                                <br>
+                                   聯絡信箱：jamekao@hotmail.com</p>
+                            </div>
+                            <div class="contact2">
+                            <p class="booking1"><a href="page04.html">線上訂房</a></p>
+                            <p class="booking2">Booking Now>></p>
+                            
+                          </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+ <div id="footer">
+ 	<p>COPYRIGHT©2014   ZETMEI</br>ALL   RIGHTS RESERVED</p>
+ </div>
+
+</body>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/jQuery-tinyMap-master/jquery.tinyMap.js"></script>
+<script type="text/javascript">
+(function($){
+        //01垂直跑頁
+        /*
+         * @build  : 20-07-2013
+         * @author : Ram swaroop
+         * @site   : Compzets.com
+         * @js/animatescroll.js簡單垂直跑頁
+         */
+        $.fn.animatescroll = function(options) {
+            
+        // fetches options
+       var opts = $.extend({},$.fn.animatescroll.defaults,options);
+          
+        //這邊就是垂直跑頁的程式
+        if(opts.element == "html,body") {
+            // Get the distance of particular id or class from top
+            var offset = this.offset().top;
+        
+            // Scroll the page to the desired position
+            $(opts.element).stop().animate({ scrollTop: offset - opts.padding}, opts.scrollSpeed, opts.easing);
+        }
+        else {
+            // Scroll the element to the desired position
+            $(opts.element).stop().animate({ scrollTop: this.offset().top - this.parent().offset().top + this.parent().scrollTop() - opts.padding}, opts.scrollSpeed, opts.easing);
+        }
+    };
+    
+    // default options
+    $.fn.animatescroll.defaults = {        
+        easing:"swing",
+        scrollSpeed:800,
+        padding:0,
+        element:"html,body"
+    };   
+    //2. google map
+    $('#map').tinyMap();
+
+
+    //<![CDATA[
+    var map = new GMap(document.getElementById("map"));
+
+    //設定要顯示的控制項
+    map.addControl(new GSmallMapControl());
+    map.addControl(new GMapTypeControl());
+
+    //決定你 Google 地圖的中心點位置和縮放大小
+    map.setCenter(new GLatLng(22.996733, 120.212465), 16);
+
+    //標記在 Google 地圖上的經緯度
+    var point = new GLatLng(22.996733, 120.212465);
+    var marker = new GMarker(point);
+    map.addOverlay(marker);
+
+    //在地圖上放置標點說明
+    var html = "台南火車站";
+    map.openInfoWindowHtml (map.getCenter(), html);
+
+    //]]>
+
+}(jQuery));
+</script>>
+</html>
+

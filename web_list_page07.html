@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZETMEI</title>
+	<link rel="shortcut icon" href="images/bg/icon.png" />
+	<link rel="stylesheet" href="css/reset(muki).css">
+	<link rel="stylesheet" href="css/frameStyle.css">
+	<link rel="stylesheet" href="css/contain.css">
+	<link rel="stylesheet" href="css/contain_list.css">
+	<link href='http://fonts.googleapis.com/css?family=Michroma|Bad+Script|Play|Orbitron|Ruda|Julius+Sans+One' rel='stylesheet' type='text/css'>
+<style>
+/*-------左頁點擊頁-----*/
+.ct_nav li:nth-child(7){
+	font-weight: 700;
+	color:#fff;
+	background-color:#68AAA6;
+}
+.ct_nav li:nth-child(7) a{
+	color:#fff;
+}
+/*-----選單css----*/
+.list2{
+	position: absolute;
+	top:30%;
+	left:5%;
+	letter-spacing:-2px;
+}
+.list2_ver{
+	position:relative;
+	display:inline-block;
+	width:150px;
+	height:30px;
+	margin-right:8px; 	
+	letter-spacing:5px;
+	box-shadow: 0 0 0 4px  #9c1c1c, 2px 1px 0px 4px #999;
+	text-shadow: -1px -1px #09b899;
+	border-radius: 5px;
+	}
+.list2_ver li a{
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	width:100%;
+	height:38;
+	background-color: #9c1c1c;
+	border: 1px dashed #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 0 4px  #9c1c1c, 2px 1px 0px 4px #999;
+	text-shadow: -1px -1px #aa3030;
+
+	text-align:center;
+	line-height:30px;
+	color:#FFF;
+	text-decoration:none;
+	}
+
+	
+.list2_ver:hover li:nth-child(1) a{top:0px;}
+.list2_ver:hover li:nth-child(2) a{top:35px;}
+.list2_ver:hover li:nth-child(3) a{top:70px;}
+.list2_ver:hover li:nth-child(4) a{top:105px;}
+.list2_ver:hover li:nth-child(5) a{top:140px;}
+.list2_ver:hover li:nth-child(6) a{top:175px;}
+
+
+.list2_ver:hover li:nth-child(1) a{transition:top .5s .2s;z-index:6;}
+.list2_ver:hover li:nth-child(2) a{transition:top .5s .4s;z-index:5;}
+.list2_ver:hover li:nth-child(3) a{transition:top .5s .6s;z-index:4;}
+.list2_ver:hover li:nth-child(4) a{transition:top .5s .8s;z-index:3;}
+.list2_ver:hover li:nth-child(5) a{transition:top .5s 1s;z-index:2;}
+.list2_ver:hover li:nth-child(6) a{transition:top .5s 1.2s;z-index:1;}
+
+.list2_ver li:nth-child(1) a{transition:top .5s 1.2s;z-index:6;}
+.list2_ver li:nth-child(2) a{transition:top .5s 1s;z-index:5;}
+.list2_ver li:nth-child(3) a{transition:top .5s .8s;z-index:4;}
+.list2_ver li:nth-child(4) a{transition:top .5s .6s;z-index:3;}
+.list2_ver li:nth-child(5) a{transition:top .5s .4s;z-index:2;}
+.list2_ver li:nth-child(6) a{transition:top .5s .2s;z-index:1;}
+</style>
+</head>
+<body>
+	<div id="allBody">
+		<div class="header">
+			<div class="logo"><a href="index.html"><p>ZETMEI</p></a></div>
+			<nav class="navigation">
+				<li><a href="javascript:;">WEB</a>
+					<ul class="second_ul web_ul">
+						<li><a href="web_web.html">網頁作品</a></li>
+						<li><a href="web_page.html">單頁作品</a></li>
+						<li><a href="web_list_page01.html">CSS選單</a></li>
+						<li><a href="web_img_page01.html">CSS圖文</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">GRAGHIC</a>
+					<ul class="second_ul graphic_ul">
+						<li><a href="graphic_id.html">ID作品</a></li>
+						<li><a href="graphic_ps.html">PS作品</a></li>
+						<li><a href="graphic_illu.html">ILLU作品</a></li>
+						<li><a href="graphic_sketch.html">素描作品</a></li>
+					</ul>
+				</li>
+				<li><a href="ABOUT.html">ABOUT.html</a></li>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="cont_left">
+				<p>css選單</p>
+				<ul class="ct_nav">
+					<li><a href="web_list_page01.html">SAMPLE01</a></li>
+					<li><a href="web_list_page02.html">SAMPLE02</a></li>
+					<li><a href="web_list_page03.html">SAMPLE03</a></li>
+					<li><a href="web_list_page04.html">SAMPLE04</a></li>
+					<li><a href="web_list_page05.html">SAMPLE05</a></li>
+					<li><a href="web_list_page06.html">SAMPLE06</a></li>
+					<li><a href="web_list_page07.html">SAMPLE07</a></li>
+					<li><a href="web_list_page08.html">SAMPLE08</a></li>
+					<li><a href="web_list_page09.html">SAMPLE09</a></li>
+					<li><a href="web_list_page10.html">SAMPLE10</a></li>
+				</ul>
+			</div>				
+			<div class="cont_right">
+				<h3>+純CSS選單</h3>
+				<p>&nbsp; 全部使用CSS寫的選單，滑鼠hover上移搭配互動
+				</br>&nbsp; 次選單使用時間差滑開特效</p>
+				<ul class="list2">
+					<ul class="list2_ver">
+					  <li><a href="#">第一頁</a></li>
+					  <li><a href="#">1-1</a></li>
+					  <li><a href="#">1-2</a></li>
+					  <li><a href="#">1-3</a></li>
+					  <li><a href="#">1-4</a></li>
+					  <li><a href="#">1-5</a></li>
+					</ul>
+					<ul class="list2_ver">
+					  <li><a href="#">第二頁</a></li>
+					  <li><a href="#">2-1</a></li>
+					  <li><a href="#">2-2</a></li>
+					  <li><a href="#">2-3</a></li>
+					  <li><a href="#">2-4</a></li>
+					  <li><a href="#">2-5</a></li>
+					</ul>
+					<ul class="list2_ver">
+					  <li><a href="#">第三頁</a></li>
+					  <li><a href="#">3-1</a></li>
+					  <li><a href="#">3-2</a></li>
+					  <li><a href="#">3-3</a></li>
+					  <li><a href="#">3-4</a></li>
+					  <li><a href="#">3-5</a></li>
+					</ul>
+					<ul class="list2_ver">
+					  <li><a href="#">第四頁</a></li>
+					  <li><a href="#">3-1</a></li>
+					  <li><a href="#">3-2</a></li>
+					  <li><a href="#">3-3</a></li>
+					  <li><a href="#">3-4</a></li>
+					  <li><a href="#">3-5</a></li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">	
+			<p>COPYRIGHT©2014&nbsp;&nbsp;&nbsp;ZETMEI</br> 
+			ALL&nbsp;&nbsp;&nbsp;RIGHTS RESERVED</p>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.navigation>li').click(
+			function(){
+				$(this).children().addClass('opacity_yo')
+				$(this).siblings().children().removeClass('opacity_yo')
+				//alert('');
+			}	
+	)
+	$('.ct_nav li').click(
+			function(){
+				//alert('');
+				$(this).children().addClass('using_yo')
+				$(this).siblings().children().removeClass('using_yo')
+				
+			}	
+	)	
+})
+</script>
+</html>

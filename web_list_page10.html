@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZETMEI</title>
+	<link rel="shortcut icon" href="images/bg/icon.png" />
+	<link rel="stylesheet" href="css/reset(muki).css">
+	<link rel="stylesheet" href="css/frameStyle.css">
+	<link rel="stylesheet" href="css/contain.css">
+	<link rel="stylesheet" href="css/contain_list.css">
+	<link href='http://fonts.googleapis.com/css?family=Michroma|Bad+Script|Play|Orbitron|Ruda|Julius+Sans+One' rel='stylesheet' type='text/css'>
+<style>
+/*-------左頁點擊頁-----*/
+.ct_nav li:nth-child(10){
+	font-weight: 700;
+	color:#fff;
+	background-color:#68AAA6;
+}
+.ct_nav li:nth-child(10) a{
+	color:#fff;
+}
+/*-----選單css----*/
+/*.list08{
+	position: relative;
+	top:7%;
+	left:-7%;
+	height:35px;					
+	text-align:center;			
+	letter-spacing:-5px;
+	width:900px;
+	margin:20px auto;
+	}
+.list08 li{
+	position:relative;
+	display:inline-block;		
+	letter-spacing:0;
+	list-style:none;	
+	}
+.list08 li a{
+	position: relative;
+	display: block;	
+	height: 35px;
+	width:105px;
+	padding: 0 10px;
+	border-left: 1px solid #8C8C8C;
+	border-right: 1px solid #858585;
+	background-color: #6B6B6B;
+
+	font-family:"微軟正黑體";
+	color: #FFF;
+	font-size:12px;
+	text-decoration: none;
+	line-height: 35px;
+	
+	}
+.list08 li:first-child a{
+	border-left:none;
+	border-radius:3px 0 0 3px;
+	}
+.list08 li:last-child a{
+	border-right:none;
+	border-radius:0 3px 3px 0;
+	}
+.list08 li a::before{
+	position:absolute;
+	top:0%;
+	left:0%;
+	content:'';
+	height:50%;
+	width:100%;
+	background-image:linear-gradient(0deg,rgba(255,255,255,.1) 0%,rgba(255,255,255,.2) 100%);
+	}
+.list08 li a:hover{
+	background-color:#333;
+	}*/
+</style>
+</head>
+<body>
+	<div id="allBody">
+		<div class="header">
+			<div class="logo"><a href="index.html"><p>ZETMEI</p></a></div>
+			<nav class="navigation">
+				<li><a href="javascript:;">WEB</a>
+					<ul class="second_ul web_ul">
+						<li><a href="web_web.html">網頁作品</a></li>
+						<li><a href="web_page.html">單頁作品</a></li>
+						<li><a href="web_list_page01.html">CSS選單</a></li>
+						<li><a href="web_img_page01.html">CSS圖文</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">GRAGHIC</a>
+					<ul class="second_ul graphic_ul">
+						<li><a href="graphic_id.html">ID作品</a></li>
+						<li><a href="graphic_ps.html">PS作品</a></li>
+						<li><a href="graphic_illu.html">ILLU作品</a></li>
+						<li><a href="graphic_sketch.html">素描作品</a></li>
+					</ul>
+				</li>
+				<li><a href="ABOUT.html">ABOUT.html</a></li>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="cont_left">
+				<p>css選單</p>
+				<ul class="ct_nav">
+					<li><a href="web_list_page01.html">SAMPLE01</a></li>
+					<li><a href="web_list_page02.html">SAMPLE02</a></li>
+					<li><a href="web_list_page03.html">SAMPLE03</a></li>
+					<li><a href="web_list_page04.html">SAMPLE04</a></li>
+					<li><a href="web_list_page05.html">SAMPLE05</a></li>
+					<li><a href="web_list_page06.html">SAMPLE06</a></li>
+					<li><a href="web_list_page07.html">SAMPLE07</a></li>
+					<li><a href="web_list_page08.html">SAMPLE08</a></li>
+					<li><a href="web_list_page09.html">SAMPLE09</a></li>
+					<li><a href="web_list_page10.html">SAMPLE10</a></li>
+				</ul>
+			</div>				
+			<div class="cont_right">
+				<h3>+持續更新中...</h3>
+				<p>&nbsp; 持續更新中...</p>
+				 <!-- <ul class="list08">
+			     	<li><a href="#">第一頁</a></li>
+			        <li><a href="#">第二頁</a></li>
+			        <li><a href="#">第三頁</a></li>
+			        <li><a href="#">第四頁</a></li>
+			        <li><a href="#">第五頁</a></li>
+			        <li><a href="#">第六頁</a></li>
+			    </ul> -->
+			</div>
+		</div>
+		<div class="footer">	
+			<p>COPYRIGHT©2014&nbsp;&nbsp;&nbsp;ZETMEI</br> 
+			ALL&nbsp;&nbsp;&nbsp;RIGHTS RESERVED</p>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.navigation>li').click(
+			function(){
+				$(this).children().addClass('opacity_yo')
+				$(this).siblings().children().removeClass('opacity_yo')
+				//alert('');
+			}	
+	)
+	$('.ct_nav li').click(
+			function(){
+				//alert('');
+				$(this).children().addClass('using_yo')
+				$(this).siblings().children().removeClass('using_yo')
+				
+			}	
+	)	
+})
+</script>
+</html>
