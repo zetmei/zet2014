@@ -1,0 +1,192 @@
+<style type="text/css">
+/*網頁初始設定*/
+*{ font-family:'Impact','微軟正黑體';}
+body{
+	text-align: center;	
+}
+
+/*架構排列*/
+#allBody{
+	width:1024px;
+	height:100%;
+	margin:0 auto;
+	text-align: left;
+}
+.header{
+	position: relative;
+	width:1024px;
+	height:100px;
+	background-color:#FFF;
+	padding:10px;
+	border-bottom:1px solid #000;
+}
+.container{	
+	position: relative;
+	width:1024px;
+	height:430px;
+	/*background-color:#68AAA6;*/
+	padding:10px;
+}
+.footer{	
+	position: relative;
+	width:1024px;
+	height:50px;
+	background-color:#fff;	
+	padding:10px; 
+	border-top:1px solid #000;
+}
+/*header內容*/
+.logo{
+	position: absolute;
+	display: block;
+	left:10px;
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	background-color:#68AAA6;
+	/*border-radius: 2px;*/
+}
+.logo a{
+	display: block;
+	width:100px;
+	height:100px;
+}
+.logo a:link, 
+.logo a:visited ,
+.logo a :hover ,
+.logo a :active {color:#000;}
+.logo p{/**LOGO請換圖*/
+	position: absolute;
+	top:47%;
+	left:36px;
+	font-size: 30px;	
+	line-height: 20px;
+	text-align: center;
+	font-family: "OCR A Std","微軟正黑體";
+}
+.navigation{
+	display: inline-block;
+	position: absolute;
+	z-index:10;
+	right:-20px;
+	top:58px;	
+	width:350px;
+	height:auto;
+
+	letter-spacing: 2px;
+	/*background-color:#A3C1C3;	*/
+	/*font-weight: 700px;*/
+	font-family:'Impact','微軟正黑體';	
+}
+.navigation>li{
+	display: inline-block;		
+	margin: 0 20px 0 0px;
+	font-size: 18px;
+	/*background-color:#f00;*/	
+}
+/*container內容*/
+.cont_left{
+	display: inline-block;
+	position: absolute;
+	top:20px;
+	left:20px;
+	width:200px;
+	height:410px;
+	/*background-color:#A3C1C3;*/
+}
+/*拆兩段 不知為何要這樣*/
+.ct_nav{	
+	position: absolute;
+	top:40px;
+	left:0px;
+	width:200px;
+	height:auto;
+	/*background-color:#000;*/
+}
+
+.cont_left p{
+	position: absolute;
+	top:0px;
+	left:0px;
+	color:#000;
+	font-size: 12px;
+	line-height: 20px;
+	font-family:'Impact','微軟正黑體';
+	background-color:#E2E2E2;
+}
+.cont_right{
+	display: inline-block;
+	position: absolute;
+	top:20px;
+	left:240px;
+	/*z-index: -10;*/
+	width:784px;
+	height:410px;
+	background-color:#A3C1C3;
+}
+/*footer內容*/
+.footer p{
+	font-size: 8px;
+	font-family:'Impact','微軟正黑體';	
+	text-align: center;
+}
+
+/*---------------細部修訂------------------------*/
+.navigation>li>a{
+	display: block;
+	height:20px;
+	/*background-color:#f00;*/
+	transition:.4s;
+}
+.navigation>li>a:hover{		
+	font-size: 22px;
+	color:#000;
+}
+.navigation>li a:link, 
+.navigation>li a:visited ,
+.navigation>li a :hover ,
+.navigation>li a :active {color:#000;}
+/*子選單*/
+.second_ul{
+	display: inline-block;
+	position: absolute;	
+	top:0px;	/*之後改0,但index要做修正*/
+	z-index: -2;
+	width:auto;
+	height:auto;
+	opacity: 0;
+	color:#fff;
+	/*background-color:#f00;*/
+}
+.web_ul{	left:-180px; }
+.graphic_ul{	left:-102px;}
+.second_ul>li{
+	display: inline-block;	
+}
+/*滑上去換色,用不出來*/
+/*.second_ul>li a:hover .second_ul>li{
+	width:auto;
+	height:30px;
+	background-color:#f00;
+}*/
+.second_ul>li a:link, 
+.second_ul>li a:visited ,
+.second_ul>li a :hover ,
+.second_ul>li a :active {color:#fff;}
+.second_ul li a{
+	 display: block;
+	 width:auto;
+	 height:auto;
+	 font-size: 12px;
+	 line-height:20px;
+	 text-align: center;
+     background-color: #666;
+	 padding:0px 25px;
+}
+.opacity_yo{	
+	opacity: .8;
+	top:26px;
+	transition:.6s;
+}
+
+</style>

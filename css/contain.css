@@ -1,0 +1,42 @@
+<style type="text/css">
+/*拆兩段 不知為何要這樣*/
+.ct_nav{	
+		background-color:#000;
+}
+.ct_nav li{	
+	width:200px;
+	height: 20px;
+	font-size: 12px;
+	line-height: 20px;
+	font-family: "OCR A Std","微軟正黑體";
+	margin:2px 0;
+	background-color:#E2E2E2;
+	text-align: center;
+	color:#000;
+}
+.ct_nav li a{
+	display: block;
+}
+.ct_nav li a:link, 
+.ct_nav li a:visited ,
+.ct_nav li a :active {color:#000;}
+
+
+/*左半選單的CSS標提部分*/
+/*給他做科技感底圖、字體做陰影*/
+.cont_left p{
+	width:100%;
+	height:40px;
+	border-radius: 5px;
+	background-color: #555;
+	color:#fff;
+	text-shadow:-2px 2px 15px #111;
+
+	font-family: 'Lucida Handwriting',"微軟正黑體";
+	letter-spacing: 2px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 42px;
+	font-size: 24px;
+}
+</style>

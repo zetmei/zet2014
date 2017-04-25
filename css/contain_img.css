@@ -1,0 +1,63 @@
+<style type="text/css">
+/*雙內容*/
+/*bug想這裡統一始終無效，第一個會無效，所以要寫兩次*/
+.cont_right{
+	display: inline-block;
+	position: absolute;
+	top:20px;
+	left:240px;
+
+	width:784px;
+	height:410px;
+	background-color:#ddd;
+	border:1px solid #aaa;
+	border-radius: 5px;
+}
+.cont_right{
+	display: inline-block;
+	position: absolute;
+	top:20px;
+	left:240px;
+
+	width:784px;
+	height:410px;
+	background-color:#ddd;
+	border:1px solid #aaa;
+	border-radius: 5px;
+}
+/*文字*/
+.cont_right h3{
+	position: absolute;
+	top:8%;
+	left:5%;
+
+	font-family: "OCR A Std","微軟正黑體";
+	/*font-weight: 700;*/
+	 font-size: 18px;
+	color: #4d4d4d;		
+	line-height: 22px;
+}
+.cont_right p{
+	position: absolute;
+	top:15%;
+	left:5%;
+
+	font-family: "OCR A Std","微軟正黑體";
+	font-size: 16px;
+	color: #4d4d4d;		
+	line-height: 20px;
+}
+
+/*左邊滑動*/
+.ct_nav li:hover{
+	background-color:#D98080;
+	font-weight: 700;
+	color:#fff;
+}
+.ct_nav li a:hover{
+	background-color:#D98080;
+	font-weight: 700;
+	color:#fff;
+}
+
+</style>
